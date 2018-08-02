@@ -96,7 +96,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="Buy" width="30" height="30"/>
         <image name="Home" width="30" height="30"/>
     </resources>
 </document>
