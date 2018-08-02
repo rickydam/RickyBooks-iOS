@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  BuyViewController.swift
 //  RickyBooks
 //
 //  Created by Ricky Dam on 2018-08-01.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class BuyViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
