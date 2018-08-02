@@ -47,6 +47,42 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Messages-->
+        <scene sceneID="JGa-dA-P5C">
+            <objects>
+                <viewController id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCz-U7-gnd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Messages View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psb-6L-p4b">
+                                <rect key="frame" x="66.5" y="312" width="242" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by MessagesViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wp-Rz-CEF">
+                                <rect key="frame" x="72" y="363" width="231" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Psb-6L-p4b" secondAttribute="centerY" id="Bcr-Ff-JVr"/>
+                            <constraint firstItem="5wp-Rz-CEF" firstAttribute="centerX" secondItem="Psb-6L-p4b" secondAttribute="centerX" id="IeQ-Mo-hp4"/>
+                            <constraint firstItem="5wp-Rz-CEF" firstAttribute="top" secondItem="Psb-6L-p4b" secondAttribute="bottom" constant="8" symbolic="YES" id="khK-jr-Lzt"/>
+                            <constraint firstAttribute="centerX" secondItem="Psb-6L-p4b" secondAttribute="centerX" id="pKQ-4x-NI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CsP-ta-Ukk"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Messages" image="Messages" id="ksX-L0-rba" userLabel="Messages"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Jz-18-6ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="1038"/>
+        </scene>
         <!--Buy-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -96,15 +132,17 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="w9Q-sQ-E5o" kind="relationship" relationship="viewControllers" id="ftg-UI-a3a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="-534" y="1038"/>
         </scene>
     </scenes>
     <resources>
         <image name="Buy" width="30" height="30"/>
         <image name="Home" width="30" height="30"/>
+        <image name="Messages" width="30" height="30"/>
     </resources>
 </document>
