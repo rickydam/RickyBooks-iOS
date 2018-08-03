@@ -50,7 +50,7 @@
         <!--Messages-->
         <scene sceneID="JGa-dA-P5C">
             <objects>
-                <viewController id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCz-U7-gnd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
