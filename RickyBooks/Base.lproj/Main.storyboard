@@ -47,6 +47,35 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Buy-->
+        <scene sceneID="M1x-kf-oZA">
+            <objects>
+                <tableViewController title="Buy" id="oer-u4-Nr6" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BPp-5R-Y57">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BPp-5R-Y57" id="1RZ-u6-lek">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oer-u4-Nr6" id="1ux-mK-qbT"/>
+                            <outlet property="delegate" destination="oer-u4-Nr6" id="9Tg-rh-YFt"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Buy" image="Buy" id="PAN-il-XMe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
         <!--Messages-->
         <scene sceneID="JGa-dA-P5C">
             <objects>
@@ -155,22 +184,6 @@
             </objects>
             <point key="canvasLocation" x="750" y="2399"/>
         </scene>
-        <!--Buy-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController title="Buy" id="8rJ-Kc-sve" customClass="BuyViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Buy" image="Buy" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="750" y="360"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -182,7 +195,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="oer-u4-Nr6" kind="relationship" relationship="viewControllers" id="NQG-fw-5Tb"/>
                         <segue destination="w9Q-sQ-E5o" kind="relationship" relationship="viewControllers" id="ftg-UI-a3a"/>
                         <segue destination="EVA-NZ-ERn" kind="relationship" relationship="viewControllers" id="uG5-9s-ncf"/>
                         <segue destination="wGi-gv-gtp" kind="relationship" relationship="viewControllers" id="Lyn-S3-a2m"/>
