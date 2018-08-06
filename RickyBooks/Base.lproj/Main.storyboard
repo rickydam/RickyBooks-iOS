@@ -70,7 +70,6 @@
                             <outlet property="delegate" destination="oer-u4-Nr6" id="9Tg-rh-YFt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Buy" image="Buy" id="PAN-il-XMe"/>
                     <navigationItem key="navigationItem" title="Buy a textbook!" id="DRl-bQ-OZu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
