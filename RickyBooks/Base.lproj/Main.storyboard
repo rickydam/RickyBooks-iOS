@@ -62,7 +62,99 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BPp-5R-Y57" id="1RZ-u6-lek">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yjU-ME-4Bg" userLabel="Textbook Image View">
+                                            <rect key="frame" x="5" y="10" width="80" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d02-KN-L76" userLabel="Textbook Title Label">
+                                            <rect key="frame" x="90" y="5" width="31" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl5-xY-etu" userLabel="Textbook Author Label">
+                                            <rect key="frame" x="90" y="23" width="43.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-ZR-DiB" userLabel="Textbook Edition Label">
+                                            <rect key="frame" x="90" y="41" width="44.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dnd-Cw-MCd" userLabel="Textbook Condition Label">
+                                            <rect key="frame" x="90" y="59" width="62.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gs-aD-CBc" userLabel="Textbook Type Label">
+                                            <rect key="frame" x="90" y="77" width="32" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coursecode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ5-4p-eVs" userLabel="Textbook Coursecode Label">
+                                            <rect key="frame" x="90" y="95" width="78.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3dL-SD-yHV" userLabel="Textbook Price Label">
+                                            <rect key="frame" x="200" y="46" width="60" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" red="0.0087444528562530439" green="0.55497085492227982" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Timestamp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZX-T3-6yf" userLabel="Textbook Timestamp Label">
+                                            <rect key="frame" x="200" y="77" width="77.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ApZ-0t-dbE" userLabel="Textbook Seller Label">
+                                            <rect key="frame" x="200" y="95" width="36.5" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0gs-aD-CBc" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="3DT-0I-46q"/>
+                                        <constraint firstItem="qTg-ZR-DiB" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="8ve-Oa-gkM"/>
+                                        <constraint firstItem="xZX-T3-6yf" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="9oH-6a-pOu"/>
+                                        <constraint firstItem="d02-KN-L76" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="CUu-uR-q4w"/>
+                                        <constraint firstItem="ApZ-0t-dbE" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="CXs-ew-GGs"/>
+                                        <constraint firstItem="0gs-aD-CBc" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="77" id="G7o-k2-YMx"/>
+                                        <constraint firstItem="ApZ-0t-dbE" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="95" id="ITY-81-nJ1"/>
+                                        <constraint firstItem="qTg-ZR-DiB" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="41" id="IhW-lM-Zu3"/>
+                                        <constraint firstItem="xZX-T3-6yf" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="77" id="La3-Ez-50H"/>
+                                        <constraint firstItem="Dnd-Cw-MCd" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="PVS-qw-KZL"/>
+                                        <constraint firstItem="nQ5-4p-eVs" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="SLi-Vn-BTq"/>
+                                        <constraint firstItem="d02-KN-L76" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="5" id="TDZ-Vy-rKp"/>
+                                        <constraint firstItem="3dL-SD-yHV" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="Uts-mY-Gt6"/>
+                                        <constraint firstItem="sl5-xY-etu" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="acf-fJ-8RK"/>
+                                        <constraint firstItem="3dL-SD-yHV" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="46" id="dsP-fV-oEg"/>
+                                        <constraint firstItem="Dnd-Cw-MCd" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="59" id="k9G-cw-XFH"/>
+                                        <constraint firstItem="sl5-xY-etu" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="23" id="mG5-Wb-XVO"/>
+                                        <constraint firstItem="nQ5-4p-eVs" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="95" id="y41-Ne-P33"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textbookAuthorLabel" destination="sl5-xY-etu" id="g8b-rW-2DB"/>
+                                    <outlet property="textbookConditionLabel" destination="Dnd-Cw-MCd" id="4td-xo-dkI"/>
+                                    <outlet property="textbookCoursecodeLabel" destination="nQ5-4p-eVs" id="qG8-gD-Toj"/>
+                                    <outlet property="textbookEditionLabel" destination="qTg-ZR-DiB" id="8eV-wk-DgY"/>
+                                    <outlet property="textbookImageView" destination="yjU-ME-4Bg" id="2Nh-XS-0In"/>
+                                    <outlet property="textbookPriceLabel" destination="3dL-SD-yHV" id="uO3-rR-D0E"/>
+                                    <outlet property="textbookSellerLabel" destination="ApZ-0t-dbE" id="28D-bV-KVL"/>
+                                    <outlet property="textbookTimestampLabel" destination="xZX-T3-6yf" id="Vhe-Be-h2F"/>
+                                    <outlet property="textbookTitleLabel" destination="d02-KN-L76" id="gOH-sL-eEW"/>
+                                    <outlet property="textbookTypeLabel" destination="0gs-aD-CBc" id="jWw-Da-CJk"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
