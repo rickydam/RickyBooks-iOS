@@ -188,6 +188,7 @@
 				FA9CA2FC211276E200AED111 /* Sources */,
 				FA9CA2FD211276E200AED111 /* Frameworks */,
 				FA9CA2FE211276E200AED111 /* Resources */,
+				15F314AE39B2C1DD6E592EA3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -307,6 +308,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		15F314AE39B2C1DD6E592EA3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RickyBooks/Pods-RickyBooks-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RickyBooks/Pods-RickyBooks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		63C8ADFD2CE0C19E825C8AEE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

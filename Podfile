@@ -6,7 +6,7 @@ target 'RickyBooks' do
   use_frameworks!
 
   # Pods for RickyBooks
-  
+  pod 'Kingfisher', '~> 4.0'
 
   target 'RickyBooksTests' do
     inherit! :search_paths
