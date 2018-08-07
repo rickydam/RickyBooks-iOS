@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -123,23 +124,32 @@
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="ApZ-0t-dbE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nQ5-4p-eVs" secondAttribute="trailing" id="02s-H4-Kkh"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d02-KN-L76" secondAttribute="trailing" id="1IT-Rx-rH1"/>
                                         <constraint firstItem="0gs-aD-CBc" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="3DT-0I-46q"/>
                                         <constraint firstItem="qTg-ZR-DiB" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="8ve-Oa-gkM"/>
                                         <constraint firstItem="xZX-T3-6yf" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="9oH-6a-pOu"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="xZX-T3-6yf" secondAttribute="trailing" id="AA7-dg-tet"/>
                                         <constraint firstItem="d02-KN-L76" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="CUu-uR-q4w"/>
                                         <constraint firstItem="ApZ-0t-dbE" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="CXs-ew-GGs"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="3dL-SD-yHV" secondAttribute="trailing" id="EAa-5g-plL"/>
                                         <constraint firstItem="0gs-aD-CBc" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="77" id="G7o-k2-YMx"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ApZ-0t-dbE" secondAttribute="trailing" id="GJP-Ca-Uz7"/>
                                         <constraint firstItem="ApZ-0t-dbE" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="95" id="ITY-81-nJ1"/>
                                         <constraint firstItem="qTg-ZR-DiB" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="41" id="IhW-lM-Zu3"/>
                                         <constraint firstItem="xZX-T3-6yf" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="77" id="La3-Ez-50H"/>
                                         <constraint firstItem="Dnd-Cw-MCd" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="PVS-qw-KZL"/>
                                         <constraint firstItem="nQ5-4p-eVs" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="SLi-Vn-BTq"/>
                                         <constraint firstItem="d02-KN-L76" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="5" id="TDZ-Vy-rKp"/>
+                                        <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="sl5-xY-etu" secondAttribute="trailing" id="ToU-tP-sKg"/>
                                         <constraint firstItem="3dL-SD-yHV" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="200" id="Uts-mY-Gt6"/>
                                         <constraint firstItem="sl5-xY-etu" firstAttribute="leading" secondItem="1RZ-u6-lek" secondAttribute="leading" constant="90" id="acf-fJ-8RK"/>
+                                        <constraint firstItem="3dL-SD-yHV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dnd-Cw-MCd" secondAttribute="trailing" id="cFh-RG-pfX"/>
                                         <constraint firstItem="3dL-SD-yHV" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="46" id="dsP-fV-oEg"/>
                                         <constraint firstItem="Dnd-Cw-MCd" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="59" id="k9G-cw-XFH"/>
+                                        <constraint firstItem="3dL-SD-yHV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qTg-ZR-DiB" secondAttribute="trailing" id="lfx-2e-tvN"/>
                                         <constraint firstItem="sl5-xY-etu" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="23" id="mG5-Wb-XVO"/>
+                                        <constraint firstItem="xZX-T3-6yf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0gs-aD-CBc" secondAttribute="trailing" id="u2o-cP-kRp"/>
                                         <constraint firstItem="nQ5-4p-eVs" firstAttribute="top" secondItem="1RZ-u6-lek" secondAttribute="top" constant="95" id="y41-Ne-P33"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -232,7 +242,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First and Last Name" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-to-Jk6" userLabel="RegisterNameField">
                                         <rect key="frame" x="62.5" y="10" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="1TL-W2-XXV"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="1TL-W2-XXV"/>
                                             <constraint firstAttribute="height" constant="40" id="Qpw-Vu-dC0"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -243,7 +253,7 @@
                                         <rect key="frame" x="62.5" y="60" width="250" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="VZY-Nn-buC"/>
-                                            <constraint firstAttribute="width" constant="250" id="Vlj-fP-x0f"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="Vlj-fP-x0f"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -252,7 +262,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="sYK-eb-XaL" userLabel="RegisterPasswordField">
                                         <rect key="frame" x="62.5" y="110" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="HW5-kf-O9V"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="HW5-kf-O9V"/>
                                             <constraint firstAttribute="height" constant="40" id="xZV-oO-0AI"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -262,7 +272,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="eaM-iF-kUW" userLabel="RegisterConfirmPasswordField">
                                         <rect key="frame" x="62.5" y="160" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="PJz-Fu-k0z"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="PJz-Fu-k0z"/>
                                             <constraint firstAttribute="height" constant="40" id="kkg-pv-Tn2"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -274,7 +284,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.46274509803921571" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="B1C-P6-f3P"/>
-                                            <constraint firstAttribute="width" constant="80" id="bdu-zo-uWv"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="bdu-zo-uWv"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Submit">
@@ -301,7 +311,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Njo-9G-X63" userLabel="LoginEmailField">
                                         <rect key="frame" x="62.5" y="10" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="BQr-cf-BnZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="BQr-cf-BnZ"/>
                                             <constraint firstAttribute="height" constant="40" id="dVh-vE-UJU"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -311,7 +321,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="H3U-TC-VAt" userLabel="LoginPasswordField">
                                         <rect key="frame" x="62.5" y="60" width="250" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="250" id="e81-Dd-UiR"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="e81-Dd-UiR"/>
                                             <constraint firstAttribute="height" constant="40" id="wOd-Vr-m8L"/>
                                         </constraints>
                                         <nil key="textColor"/>
@@ -323,7 +333,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="AAS-iA-DuW"/>
-                                            <constraint firstAttribute="width" constant="80" id="gWH-Yp-7OP"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="gWH-Yp-7OP"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <state key="normal" title="Submit">
