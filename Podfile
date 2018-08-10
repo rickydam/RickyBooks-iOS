@@ -7,6 +7,7 @@ target 'RickyBooks' do
 
   # Pods for RickyBooks
   pod 'Kingfisher', '~> 4.0'
+  pod 'KeychainAccess', '~> 3.1.1'
 
   target 'RickyBooksTests' do
     inherit! :search_paths
