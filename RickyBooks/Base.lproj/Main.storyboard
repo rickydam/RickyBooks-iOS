@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,7 +14,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Home" id="9pv-A4-QxB" customClass="HomeViewController" customModule="RickyBooks" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home" id="9pv-A4-QxB" customClass="HomeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -42,7 +42,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +50,7 @@
         <!--Buy Table View Controller-->
         <scene sceneID="M1x-kf-oZA">
             <objects>
-                <tableViewController title="Buy Table View Controller" id="oer-u4-Nr6" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Buy" title="Buy Table View Controller" id="oer-u4-Nr6" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -173,7 +172,6 @@
                             <outlet property="delegate" destination="oer-u4-Nr6" id="9Tg-rh-YFt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Buy a textbook!" id="DRl-bQ-OZu"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +180,7 @@
         <!--Messages-->
         <scene sceneID="JGa-dA-P5C">
             <objects>
-                <viewController id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Messages" id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCz-U7-gnd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,7 +207,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CsP-ta-Ukk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messages" image="Messages" id="ksX-L0-rba" userLabel="Messages"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Jz-18-6ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -387,7 +384,7 @@
         <!--Sell Table View Controller-->
         <scene sceneID="9so-Ga-Q6m">
             <objects>
-                <viewController title="Sell Table View Controller" id="EVA-NZ-ERn" userLabel="Sell Table View Controller" customClass="SellViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sell" title="Sell View Controller" id="EVA-NZ-ERn" userLabel="Sell View Controller" customClass="SellViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DZu-TX-Cjj" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -414,7 +411,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMU-3d-bC3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sell a textbook!" id="pcN-W3-mxc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxA-jI-bBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -423,7 +419,7 @@
         <!--Profile-->
         <scene sceneID="S2N-cu-VCt">
             <objects>
-                <viewController title="Profile" id="wGi-gv-gtp" customClass="ProfileViewController" customModule="RickyBooks" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Profile" title="Profile" id="wGi-gv-gtp" customClass="ProfileViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuL-w1-qba">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,77 +446,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hN4-7b-ze5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" id="3Bp-VL-CY3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87W-LW-Cfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="2399"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" propertyAccessControl="all" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="EdH-zg-FfU" kind="relationship" relationship="viewControllers" id="NQG-fw-5Tb"/>
-                        <segue destination="w9Q-sQ-E5o" kind="relationship" relationship="viewControllers" id="ftg-UI-a3a"/>
-                        <segue destination="v8y-4d-xe2" kind="relationship" relationship="viewControllers" id="uG5-9s-ncf"/>
-                        <segue destination="wGi-gv-gtp" kind="relationship" relationship="viewControllers" id="Lyn-S3-a2m"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-534" y="1038"/>
-        </scene>
-        <!--Buy Navigation Controller-->
-        <scene sceneID="f21-A8-Bhu">
-            <objects>
-                <navigationController title="Buy Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="EdH-zg-FfU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Buy" image="Buy" id="PAN-il-XMe"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="8QN-3G-xNi">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="oer-u4-Nr6" kind="relationship" relationship="rootViewController" id="3lU-FC-agj"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fMW-B9-ic4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
-        </scene>
-        <!--Sell Navigation Controller-->
-        <scene sceneID="Yut-Ew-qsp">
-            <objects>
-                <navigationController title="Sell Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="v8y-4d-xe2" userLabel="Sell Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sell" image="Sell" id="FeM-xM-w34"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RSu-RU-llV">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="EVA-NZ-ERn" kind="relationship" relationship="rootViewController" id="Agg-rh-qQC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FVw-rd-s0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="749.60000000000002" y="1720.3898050974515"/>
-        </scene>
     </scenes>
-    <resources>
-        <image name="Buy" width="30" height="30"/>
-        <image name="Home" width="30" height="30"/>
-        <image name="Messages" width="30" height="30"/>
-        <image name="Profile" width="30" height="30"/>
-        <image name="Sell" width="30" height="30"/>
-    </resources>
 </document>
