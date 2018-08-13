@@ -39,6 +39,10 @@ class AuthorizeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UIGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard(_:)))
+        view.addGestureRecognizer(tap)
+        
         registerLoginSegment.setTitleTextAttributes([NSAttributedStringKey.font: UIFont.systemFont(ofSize: 16)], for: .normal)
         
         registerNameField.layer.borderColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1).cgColor
@@ -57,6 +61,10 @@ class AuthorizeViewController: UIViewController {
         
         registerSubmitButton.layer.cornerRadius = 5
         loginSubmitButton.layer.cornerRadius = 5
+    }
+
+    @objc private func dismissKeyboard(_ sender: Any) {
+        view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
