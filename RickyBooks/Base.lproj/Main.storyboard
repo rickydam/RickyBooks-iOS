@@ -52,7 +52,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="Buy" title="Buy Table View Controller" id="oer-u4-Nr6" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -175,7 +175,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
+            <point key="canvasLocation" x="750" y="360"/>
         </scene>
         <!--Messages-->
         <scene sceneID="JGa-dA-P5C">
@@ -215,13 +215,13 @@
         <!--Authorize-->
         <scene sceneID="XWM-zv-AwQ">
             <objects>
-                <viewController title="Authorize" id="ime-Is-rKD" customClass="AuthorizeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Authorize" title="Authorize" id="ime-Is-rKD" customClass="AuthorizeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cB4-4R-mDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R0Q-LN-qNB" userLabel="RegisterLoginSegment">
-                                <rect key="frame" x="87" y="50" width="201" height="41"/>
+                                <rect key="frame" x="87" y="100" width="201" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pGA-1R-4jh"/>
                                 </constraints>
@@ -234,7 +234,7 @@
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fd8-S3-1QA" userLabel="RegisterView">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First and Last Name" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="1jQ-to-Jk6" userLabel="RegisterNameField">
                                         <rect key="frame" x="62.5" y="10" width="250" height="40"/>
@@ -287,6 +287,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerSubmitPressed:" destination="ime-Is-rKD" eventType="touchUpInside" id="QET-dU-cKm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -303,7 +306,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI5-Eo-oMt" userLabel="LoginView">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="150" width="375" height="517"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Njo-9G-X63" userLabel="LoginEmailField">
                                         <rect key="frame" x="62.5" y="10" width="250" height="40"/>
@@ -336,6 +339,9 @@
                                         <state key="normal" title="Submit">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginSubmitPressed:" destination="ime-Is-rKD" eventType="touchUpInside" id="2BQ-LJ-d0I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -356,7 +362,7 @@
                             <constraint firstItem="Fd8-S3-1QA" firstAttribute="top" secondItem="R0Q-LN-qNB" secondAttribute="bottom" constant="10" id="PuL-DE-zu2"/>
                             <constraint firstItem="637-VH-8ZZ" firstAttribute="bottom" secondItem="pI5-Eo-oMt" secondAttribute="bottom" id="RR5-ME-PM0"/>
                             <constraint firstItem="Fd8-S3-1QA" firstAttribute="leading" secondItem="637-VH-8ZZ" secondAttribute="leading" id="fDE-dv-0Y8"/>
-                            <constraint firstItem="R0Q-LN-qNB" firstAttribute="top" secondItem="cB4-4R-mDC" secondAttribute="top" constant="50" id="qck-PF-Yeh"/>
+                            <constraint firstItem="R0Q-LN-qNB" firstAttribute="top" secondItem="cB4-4R-mDC" secondAttribute="top" constant="100" id="qck-PF-Yeh"/>
                             <constraint firstItem="pI5-Eo-oMt" firstAttribute="leading" secondItem="637-VH-8ZZ" secondAttribute="leading" id="vtP-hH-KGa"/>
                             <constraint firstItem="637-VH-8ZZ" firstAttribute="trailing" secondItem="pI5-Eo-oMt" secondAttribute="trailing" id="yhj-fj-XwO"/>
                             <constraint firstItem="pI5-Eo-oMt" firstAttribute="top" secondItem="R0Q-LN-qNB" secondAttribute="bottom" constant="10" id="zJW-aN-55t"/>
@@ -379,9 +385,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tL0-k4-eee" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-535.20000000000005" y="2052.3238380809598"/>
+            <point key="canvasLocation" x="-81" y="1719"/>
         </scene>
-        <!--Sell Table View Controller-->
+        <!--Sell View Controller-->
         <scene sceneID="9so-Ga-Q6m">
             <objects>
                 <viewController storyboardIdentifier="Sell" title="Sell View Controller" id="EVA-NZ-ERn" userLabel="Sell View Controller" customClass="SellViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
@@ -414,7 +420,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxA-jI-bBc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1688.8" y="1720.3898050974515"/>
+            <point key="canvasLocation" x="750" y="1720"/>
         </scene>
         <!--Profile-->
         <scene sceneID="S2N-cu-VCt">
