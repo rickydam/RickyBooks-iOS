@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController storyboardIdentifier="Home" title="Home" id="9pv-A4-QxB" customClass="HomeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" title="Home View Controller" id="9pv-A4-QxB" userLabel="Home View Controller" customClass="HomeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" propertyAccessControl="all">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Buy Table View Controller-->
+        <!--Buy View Controller-->
         <scene sceneID="M1x-kf-oZA">
             <objects>
-                <tableViewController storyboardIdentifier="Buy" title="Buy Table View Controller" id="oer-u4-Nr6" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Buy" title="Buy View Controller" id="oer-u4-Nr6" userLabel="Buy View Controller" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Messages-->
+        <!--Messages View Controller-->
         <scene sceneID="JGa-dA-P5C">
             <objects>
-                <viewController storyboardIdentifier="Messages" id="w9Q-sQ-E5o" userLabel="Messages" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Messages" title="Messages View Controller" id="w9Q-sQ-E5o" userLabel="Messages View Controller" customClass="MessagesViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCz-U7-gnd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="1038"/>
         </scene>
-        <!--Authorize-->
+        <!--Authorize View Controller-->
         <scene sceneID="XWM-zv-AwQ">
             <objects>
-                <viewController storyboardIdentifier="Authorize" title="Authorize" id="ime-Is-rKD" customClass="AuthorizeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Authorize" title="Authorize View Controller" id="ime-Is-rKD" userLabel="Authorize View Controller" customClass="AuthorizeViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cB4-4R-mDC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -422,10 +422,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="1720"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="S2N-cu-VCt">
             <objects>
-                <viewController title="Profile" id="wGi-gv-gtp" customClass="ProfileViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="wGi-gv-gtp" userLabel="Profile View Controller" customClass="ProfileViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuL-w1-qba">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
