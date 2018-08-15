@@ -458,13 +458,13 @@
                         <viewLayoutGuide key="safeArea" id="637-VH-8ZZ"/>
                     </view>
                     <connections>
-                        <outlet property="RegisterLoginSegment" destination="R0Q-LN-qNB" id="DaX-At-H0L"/>
                         <outlet property="loginEmailField" destination="Njo-9G-X63" id="cau-at-yIQ"/>
                         <outlet property="loginPasswordField" destination="H3U-TC-VAt" id="C4h-ey-XBs"/>
                         <outlet property="loginSubmitButton" destination="oka-mT-cZn" id="eh9-Nw-Fzx"/>
                         <outlet property="loginView" destination="pI5-Eo-oMt" id="XSA-ti-bMO"/>
                         <outlet property="registerConfirmPasswordField" destination="eaM-iF-kUW" id="7uW-ES-WDh"/>
                         <outlet property="registerEmailField" destination="lEp-Df-ZbL" id="6OF-D7-INM"/>
+                        <outlet property="registerLoginSegment" destination="R0Q-LN-qNB" id="hrR-AK-Gbj"/>
                         <outlet property="registerNameField" destination="1jQ-to-Jk6" id="wsB-JT-SP7"/>
                         <outlet property="registerPasswordField" destination="sYK-eb-XaL" id="J8q-mf-Mtn"/>
                         <outlet property="registerSubmitButton" destination="SZs-r2-fxV" id="Qle-mQ-NNp"/>
