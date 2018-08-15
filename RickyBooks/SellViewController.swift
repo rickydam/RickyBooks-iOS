@@ -43,6 +43,7 @@ class SellViewController: UIViewController {
     let typePicker = UIPickerView()
     
     @IBOutlet weak var sellSubmitButton: UIButton!
+    @IBOutlet weak var chooseImageButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -298,6 +299,7 @@ class SellViewController: UIViewController {
         textbookPriceField.attributedPlaceholder = NSAttributedString(string: "Price (Ex: 100)", attributes: [NSAttributedStringKey.foregroundColor: UIColor.lightGray])
         
         sellSubmitButton.layer.cornerRadius = 5
+        chooseImageButton.layer.cornerRadius = 5
     }
     
     func createLists() {
