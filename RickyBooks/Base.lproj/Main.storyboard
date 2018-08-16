@@ -238,8 +238,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aym-GW-tMY" userLabel="TextbookTitleField">
-                                <rect key="frame" x="62.5" y="124" width="250" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr9-iS-H30" userLabel="ChooseImageButton">
+                                <rect key="frame" x="122" y="84" width="130" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="P80-AP-Mhw"/>
+                                    <constraint firstAttribute="height" constant="40" id="c6r-Ic-pV2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="Choose Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onChooseImagePressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="cyG-5Z-H6y"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qF-sw-eaN" userLabel="ChosenImage">
+                                <rect key="frame" x="112" y="74" width="150" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="A3v-Mi-sgh"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="txx-zP-s2w"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aym-GW-tMY" userLabel="TextbookTitleField">
+                                <rect key="frame" x="62.5" y="134" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="O0U-Ab-Ofl"/>
                                     <constraint firstAttribute="height" constant="40" id="oPr-uu-XcJ"/>
@@ -248,8 +270,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-Vc-oPU" userLabel="TextbookAuthorField">
-                                <rect key="frame" x="62.5" y="169" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-Vc-oPU" userLabel="TextbookAuthorField">
+                                <rect key="frame" x="62.5" y="179" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="7zm-bD-IpC"/>
                                     <constraint firstAttribute="height" constant="40" id="SMh-Ut-JI6"/>
@@ -258,8 +280,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-0f-ARv" userLabel="TextbookEditionField">
-                                <rect key="frame" x="62.5" y="214" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-0f-ARv" userLabel="TextbookEditionField">
+                                <rect key="frame" x="62.5" y="224" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="DWx-Ue-aKh"/>
                                     <constraint firstAttribute="height" constant="40" id="NFO-Ci-AmH"/>
@@ -268,8 +290,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dll-VW-oQV" userLabel="TextbookConditionField">
-                                <rect key="frame" x="62.5" y="259" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dll-VW-oQV" userLabel="TextbookConditionField">
+                                <rect key="frame" x="62.5" y="269" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5sZ-P4-P6W"/>
                                     <constraint firstAttribute="width" constant="250" id="Ryf-xV-ccc"/>
@@ -278,8 +300,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-B1-TLR" userLabel="TextbookTypeField">
-                                <rect key="frame" x="62.5" y="304" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-B1-TLR" userLabel="TextbookTypeField">
+                                <rect key="frame" x="62.5" y="314" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="T0z-3B-5hk"/>
                                     <constraint firstAttribute="height" constant="40" id="sdT-a4-H99"/>
@@ -288,8 +310,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course (Ex: SYSC4504)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-D1-35M" userLabel="TextbookCoursecodeField">
-                                <rect key="frame" x="62.5" y="349" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course (Ex: SYSC4504)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-D1-35M" userLabel="TextbookCoursecodeField">
+                                <rect key="frame" x="62.5" y="359" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1sO-7i-4op"/>
                                     <constraint firstAttribute="width" constant="250" id="6Uc-yh-O18"/>
@@ -301,8 +323,8 @@
                                     <action selector="courseTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="zRR-sx-sDR"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price (Ex: 100)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4cx-yt-sHu" userLabel="TextbookPriceField">
-                                <rect key="frame" x="62.5" y="394" width="250" height="40"/>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price (Ex: 100)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4cx-yt-sHu" userLabel="TextbookPriceField">
+                                <rect key="frame" x="62.5" y="404" width="250" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="rop-8u-b5F"/>
                                     <constraint firstAttribute="width" constant="250" id="yya-1y-U0W"/>
@@ -314,8 +336,8 @@
                                     <action selector="priceTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="jOl-Me-eWb"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-Vb-rBp" userLabel="SellSubmitButton">
-                                <rect key="frame" x="147.5" y="444" width="80" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-Vb-rBp" userLabel="SellSubmitButton">
+                                <rect key="frame" x="147.5" y="454" width="80" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="sMu-zQ-qH9"/>
@@ -329,18 +351,6 @@
                                     <action selector="onSubmitPressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="7hA-S5-o6I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr9-iS-H30" userLabel="ChooseImageButton">
-                                <rect key="frame" x="122.5" y="74" width="130" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="P80-AP-Mhw"/>
-                                    <constraint firstAttribute="height" constant="40" id="c6r-Ic-pV2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Choose Image">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -349,13 +359,15 @@
                             <constraint firstItem="tr9-iS-H30" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="6Be-rR-uoC"/>
                             <constraint firstItem="JKO-B1-TLR" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="F7y-DU-gFi"/>
                             <constraint firstItem="HnJ-Vc-oPU" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="JrY-fk-rSK"/>
-                            <constraint firstItem="tr9-iS-H30" firstAttribute="top" secondItem="YMU-3d-bC3" secondAttribute="top" constant="10" id="PNJ-W6-sWQ"/>
+                            <constraint firstItem="tr9-iS-H30" firstAttribute="top" secondItem="7qF-sw-eaN" secondAttribute="bottom" constant="10" id="PNJ-W6-sWQ"/>
                             <constraint firstItem="aym-GW-tMY" firstAttribute="top" secondItem="tr9-iS-H30" secondAttribute="bottom" constant="10" id="SSp-Vu-wgI"/>
                             <constraint firstItem="4cx-yt-sHu" firstAttribute="top" secondItem="CKJ-D1-35M" secondAttribute="bottom" constant="5" id="Svg-xF-uof"/>
                             <constraint firstItem="dll-VW-oQV" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="Wcc-N2-mPI"/>
+                            <constraint firstItem="7qF-sw-eaN" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="bbp-0c-9lq"/>
                             <constraint firstItem="Thp-0f-ARv" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="byO-Lh-D0m"/>
                             <constraint firstItem="dll-VW-oQV" firstAttribute="top" secondItem="Thp-0f-ARv" secondAttribute="bottom" constant="5" id="dwR-Fy-GcO"/>
                             <constraint firstItem="JKO-B1-TLR" firstAttribute="top" secondItem="dll-VW-oQV" secondAttribute="bottom" constant="5" id="g0N-1O-4GE"/>
+                            <constraint firstItem="7qF-sw-eaN" firstAttribute="top" secondItem="YMU-3d-bC3" secondAttribute="top" constant="10" id="g4U-2g-uQO"/>
                             <constraint firstItem="HnJ-Vc-oPU" firstAttribute="top" secondItem="aym-GW-tMY" secondAttribute="bottom" constant="5" id="ggF-Vb-Ow6"/>
                             <constraint firstItem="aym-GW-tMY" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="hbf-ob-vh7"/>
                             <constraint firstItem="Thp-0f-ARv" firstAttribute="top" secondItem="HnJ-Vc-oPU" secondAttribute="bottom" constant="5" id="pMI-Rp-r5P"/>
@@ -368,6 +380,8 @@
                     <navigationItem key="navigationItem" title="Sell a textbook!" id="haY-2b-mdX"/>
                     <connections>
                         <outlet property="chooseImageButton" destination="tr9-iS-H30" id="nkN-62-rvJ"/>
+                        <outlet property="chosenImage" destination="7qF-sw-eaN" id="2bn-6Z-x5y"/>
+                        <outlet property="chosenImageHeightConstraint" destination="txx-zP-s2w" id="IUN-mA-0tj"/>
                         <outlet property="sellSubmitButton" destination="xyF-Vb-rBp" id="Q1G-dY-nwy"/>
                         <outlet property="textbookAuthorField" destination="HnJ-Vc-oPU" id="X5p-mo-Q4X"/>
                         <outlet property="textbookConditionField" destination="dll-VW-oQV" id="6dF-OQ-hJc"/>
