@@ -25,7 +25,7 @@ struct PostTextbookErrorsData: Decodable {
     var textbook_price: Array<String>?
 }
 
-class SellViewController: UIViewController {
+class SellViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var textbookTitleField: UITextField!
     @IBOutlet weak var textbookAuthorField: UITextField!
     @IBOutlet weak var textbookEditionField: UITextField!
@@ -45,6 +45,9 @@ class SellViewController: UIViewController {
     @IBOutlet weak var sellSubmitButton: UIButton!
     @IBOutlet weak var chooseImageButton: UIButton!
     
+    @IBOutlet weak var chosenImage: UIImageView!
+    @IBOutlet weak var chosenImageHeightConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -58,6 +61,48 @@ class SellViewController: UIViewController {
         createLists()
         createPickers()
         createToolbars()
+    }
+    
+    @IBAction func onChooseImagePressed(_ sender: UIButton) {
+        if(chooseImageButton.titleLabel?.text == "Choose Image") {
+            if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .savedPhotosAlbum
+                imagePicker.allowsEditing = false
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+        }
+        else if(chooseImageButton.titleLabel?.text == "Delete Image") {
+            clearImage()
+        }
+        else {
+            print("Error with choosing or deleting the image.")
+        }
+    }
+    
+    func clearImage() {
+        chosenImage.frame.size.height = 0
+        chosenImageHeightConstraint.constant = 0
+        chosenImage.image = nil
+        chooseImageButton.setTitle("Choose Image", for: .normal)
+        chooseImageButton.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+    }
+    
+    func setImage(imageData: UIImage) {
+        chosenImage.frame.size.height = 150
+        chosenImageHeightConstraint.constant = 150
+        chosenImage.contentMode = .scaleAspectFit
+        chosenImage.image = imageData
+        chooseImageButton.setTitle("Delete Image", for: .normal)
+        chooseImageButton.backgroundColor = UIColor(red: 190/255, green: 38/255, blue: 37/255, alpha: 1)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            setImage(imageData: imageData)
+        }
     }
     
     @IBAction func onSubmitPressed(_ sender: UIButton) {
@@ -241,6 +286,7 @@ class SellViewController: UIViewController {
         textbookTypeField.text = ""
         textbookCoursecodeField.text = ""
         textbookPriceField.text = ""
+        clearImage()
         dismissKeyboard(self)
     }
     
