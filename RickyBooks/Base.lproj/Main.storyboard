@@ -238,142 +238,166 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr9-iS-H30" userLabel="ChooseImageButton">
-                                <rect key="frame" x="122" y="84" width="130" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X0g-0G-HYO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UTD-xS-whj" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="587"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7qF-sw-eaN" userLabel="ChosenImage">
+                                                <rect key="frame" x="112.5" y="10" width="150" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="0Kh-qQ-Bn2"/>
+                                                    <constraint firstAttribute="width" constant="150" id="Trw-QN-8j8"/>
+                                                </constraints>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tr9-iS-H30" userLabel="ChooseImageButton">
+                                                <rect key="frame" x="122.5" y="20" width="130" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="W1g-x2-lsX"/>
+                                                    <constraint firstAttribute="width" constant="130" id="lsw-D4-IiK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <state key="normal" title="Choose Image">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onChooseImagePressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="cyG-5Z-H6y"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aym-GW-tMY" userLabel="TextbookTitleField">
+                                                <rect key="frame" x="62.5" y="70" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Knn-X0-Qt2"/>
+                                                    <constraint firstAttribute="width" constant="250" id="zvf-ws-oyt"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-Vc-oPU" userLabel="TextbookAuthorField">
+                                                <rect key="frame" x="62.5" y="115" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="Lub-hs-zWL"/>
+                                                    <constraint firstAttribute="height" constant="40" id="uiG-tp-0pp"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-0f-ARv" userLabel="TextbookEditionField">
+                                                <rect key="frame" x="62.5" y="160" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="6ap-yI-SIr"/>
+                                                    <constraint firstAttribute="height" constant="40" id="cC8-4N-35u"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dll-VW-oQV" userLabel="TextbookConditionField">
+                                                <rect key="frame" x="62.5" y="205" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="G4T-hw-H0E"/>
+                                                    <constraint firstAttribute="height" constant="40" id="YFG-ws-202"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-B1-TLR" userLabel="TextbookTypeField">
+                                                <rect key="frame" x="62.5" y="250" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OBs-37-rT6"/>
+                                                    <constraint firstAttribute="width" constant="250" id="ycA-DW-fF2"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course (Ex: SYSC4504)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-D1-35M" userLabel="TextbookCoursecodeField">
+                                                <rect key="frame" x="62.5" y="295" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="1ZG-o4-RMD"/>
+                                                    <constraint firstAttribute="height" constant="40" id="fK4-4Z-wbO"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
+                                                <connections>
+                                                    <action selector="courseTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="zRR-sx-sDR"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price (Ex: 100)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4cx-yt-sHu" userLabel="TextbookPriceField">
+                                                <rect key="frame" x="62" y="340" width="250" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="250" id="kuZ-h8-6PG"/>
+                                                    <constraint firstAttribute="height" constant="40" id="zR3-nU-s1Q"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                <connections>
+                                                    <action selector="priceTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="jOl-Me-eWb"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-Vb-rBp" userLabel="SellSubmitButton">
+                                                <rect key="frame" x="147.5" y="390" width="80" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="DAM-sH-Us9"/>
+                                                    <constraint firstAttribute="height" constant="40" id="bCv-dI-9fO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <state key="normal" title="Submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="onSubmitPressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="7hA-S5-o6I"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="CKJ-D1-35M" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="2U7-ea-O6Q"/>
+                                            <constraint firstItem="JKO-B1-TLR" firstAttribute="top" secondItem="dll-VW-oQV" secondAttribute="bottom" constant="5" id="9Y1-Op-Tyd"/>
+                                            <constraint firstItem="dll-VW-oQV" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="K8N-4A-PDX"/>
+                                            <constraint firstItem="Thp-0f-ARv" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="Osp-Pd-Bx9"/>
+                                            <constraint firstItem="4cx-yt-sHu" firstAttribute="top" secondItem="CKJ-D1-35M" secondAttribute="bottom" constant="5" id="RpV-3B-GGp"/>
+                                            <constraint firstItem="dll-VW-oQV" firstAttribute="top" secondItem="Thp-0f-ARv" secondAttribute="bottom" constant="5" id="RwQ-dd-9Lk"/>
+                                            <constraint firstItem="7qF-sw-eaN" firstAttribute="top" secondItem="UTD-xS-whj" secondAttribute="top" constant="10" id="SDX-ac-P83"/>
+                                            <constraint firstItem="tr9-iS-H30" firstAttribute="top" secondItem="7qF-sw-eaN" secondAttribute="bottom" constant="10" id="VQq-ex-xjh"/>
+                                            <constraint firstItem="aym-GW-tMY" firstAttribute="top" secondItem="tr9-iS-H30" secondAttribute="bottom" constant="10" id="aTw-Oa-UDk"/>
+                                            <constraint firstItem="Thp-0f-ARv" firstAttribute="top" secondItem="HnJ-Vc-oPU" secondAttribute="bottom" constant="5" id="aoT-KX-Dm3"/>
+                                            <constraint firstItem="JKO-B1-TLR" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="ap0-fZ-0Fs"/>
+                                            <constraint firstItem="tr9-iS-H30" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="bRS-j3-qds"/>
+                                            <constraint firstItem="xyF-Vb-rBp" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="bcE-gu-LFx"/>
+                                            <constraint firstItem="xyF-Vb-rBp" firstAttribute="top" secondItem="4cx-yt-sHu" secondAttribute="bottom" constant="10" id="f74-Yt-WG1"/>
+                                            <constraint firstItem="HnJ-Vc-oPU" firstAttribute="top" secondItem="aym-GW-tMY" secondAttribute="bottom" constant="5" id="ndk-8n-MtC"/>
+                                            <constraint firstItem="aym-GW-tMY" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="tbX-Ii-4zf"/>
+                                            <constraint firstItem="7qF-sw-eaN" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="tiL-js-nWZ"/>
+                                            <constraint firstItem="4cx-yt-sHu" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="tpV-d4-V87"/>
+                                            <constraint firstItem="CKJ-D1-35M" firstAttribute="top" secondItem="JKO-B1-TLR" secondAttribute="bottom" constant="5" id="vFI-E4-MJ1"/>
+                                            <constraint firstItem="HnJ-Vc-oPU" firstAttribute="centerX" secondItem="UTD-xS-whj" secondAttribute="centerX" id="zA4-zP-Tso"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="P80-AP-Mhw"/>
-                                    <constraint firstAttribute="height" constant="40" id="c6r-Ic-pV2"/>
+                                    <constraint firstItem="UTD-xS-whj" firstAttribute="leading" secondItem="X0g-0G-HYO" secondAttribute="leading" id="92X-oS-kko"/>
+                                    <constraint firstItem="UTD-xS-whj" firstAttribute="top" secondItem="X0g-0G-HYO" secondAttribute="top" id="Xsn-3O-gDx"/>
+                                    <constraint firstAttribute="trailing" secondItem="UTD-xS-whj" secondAttribute="trailing" id="l2Y-3d-PWc"/>
+                                    <constraint firstAttribute="bottom" secondItem="UTD-xS-whj" secondAttribute="bottom" id="sv6-Oj-XHd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Choose Image">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onChooseImagePressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="cyG-5Z-H6y"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7qF-sw-eaN" userLabel="ChosenImage">
-                                <rect key="frame" x="112" y="74" width="150" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="A3v-Mi-sgh"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="txx-zP-s2w"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aym-GW-tMY" userLabel="TextbookTitleField">
-                                <rect key="frame" x="62.5" y="134" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="O0U-Ab-Ofl"/>
-                                    <constraint firstAttribute="height" constant="40" id="oPr-uu-XcJ"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Author" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="HnJ-Vc-oPU" userLabel="TextbookAuthorField">
-                                <rect key="frame" x="62.5" y="179" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="7zm-bD-IpC"/>
-                                    <constraint firstAttribute="height" constant="40" id="SMh-Ut-JI6"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Thp-0f-ARv" userLabel="TextbookEditionField">
-                                <rect key="frame" x="62.5" y="224" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="DWx-Ue-aKh"/>
-                                    <constraint firstAttribute="height" constant="40" id="NFO-Ci-AmH"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dll-VW-oQV" userLabel="TextbookConditionField">
-                                <rect key="frame" x="62.5" y="269" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="5sZ-P4-P6W"/>
-                                    <constraint firstAttribute="width" constant="250" id="Ryf-xV-ccc"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKO-B1-TLR" userLabel="TextbookTypeField">
-                                <rect key="frame" x="62.5" y="314" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="T0z-3B-5hk"/>
-                                    <constraint firstAttribute="height" constant="40" id="sdT-a4-H99"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course (Ex: SYSC4504)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CKJ-D1-35M" userLabel="TextbookCoursecodeField">
-                                <rect key="frame" x="62.5" y="359" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="1sO-7i-4op"/>
-                                    <constraint firstAttribute="width" constant="250" id="6Uc-yh-O18"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
-                                <connections>
-                                    <action selector="courseTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="zRR-sx-sDR"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price (Ex: 100)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="4cx-yt-sHu" userLabel="TextbookPriceField">
-                                <rect key="frame" x="62.5" y="404" width="250" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="rop-8u-b5F"/>
-                                    <constraint firstAttribute="width" constant="250" id="yya-1y-U0W"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="priceTextChange:" destination="EVA-NZ-ERn" eventType="editingChanged" id="jOl-Me-eWb"/>
-                                </connections>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyF-Vb-rBp" userLabel="SellSubmitButton">
-                                <rect key="frame" x="147.5" y="454" width="80" height="40"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="sMu-zQ-qH9"/>
-                                    <constraint firstAttribute="width" constant="80" id="zR9-7v-EXn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="onSubmitPressed:" destination="EVA-NZ-ERn" eventType="touchUpInside" id="7hA-S5-o6I"/>
-                                </connections>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="xyF-Vb-rBp" firstAttribute="top" secondItem="4cx-yt-sHu" secondAttribute="bottom" constant="10" id="0vA-b3-Izk"/>
-                            <constraint firstItem="CKJ-D1-35M" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="256-nl-dEf"/>
-                            <constraint firstItem="tr9-iS-H30" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="6Be-rR-uoC"/>
-                            <constraint firstItem="JKO-B1-TLR" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="F7y-DU-gFi"/>
-                            <constraint firstItem="HnJ-Vc-oPU" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="JrY-fk-rSK"/>
-                            <constraint firstItem="tr9-iS-H30" firstAttribute="top" secondItem="7qF-sw-eaN" secondAttribute="bottom" constant="10" id="PNJ-W6-sWQ"/>
-                            <constraint firstItem="aym-GW-tMY" firstAttribute="top" secondItem="tr9-iS-H30" secondAttribute="bottom" constant="10" id="SSp-Vu-wgI"/>
-                            <constraint firstItem="4cx-yt-sHu" firstAttribute="top" secondItem="CKJ-D1-35M" secondAttribute="bottom" constant="5" id="Svg-xF-uof"/>
-                            <constraint firstItem="dll-VW-oQV" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="Wcc-N2-mPI"/>
-                            <constraint firstItem="7qF-sw-eaN" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="bbp-0c-9lq"/>
-                            <constraint firstItem="Thp-0f-ARv" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="byO-Lh-D0m"/>
-                            <constraint firstItem="dll-VW-oQV" firstAttribute="top" secondItem="Thp-0f-ARv" secondAttribute="bottom" constant="5" id="dwR-Fy-GcO"/>
-                            <constraint firstItem="JKO-B1-TLR" firstAttribute="top" secondItem="dll-VW-oQV" secondAttribute="bottom" constant="5" id="g0N-1O-4GE"/>
-                            <constraint firstItem="7qF-sw-eaN" firstAttribute="top" secondItem="YMU-3d-bC3" secondAttribute="top" constant="10" id="g4U-2g-uQO"/>
-                            <constraint firstItem="HnJ-Vc-oPU" firstAttribute="top" secondItem="aym-GW-tMY" secondAttribute="bottom" constant="5" id="ggF-Vb-Ow6"/>
-                            <constraint firstItem="aym-GW-tMY" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="hbf-ob-vh7"/>
-                            <constraint firstItem="Thp-0f-ARv" firstAttribute="top" secondItem="HnJ-Vc-oPU" secondAttribute="bottom" constant="5" id="pMI-Rp-r5P"/>
-                            <constraint firstItem="4cx-yt-sHu" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="slO-Su-w62"/>
-                            <constraint firstItem="CKJ-D1-35M" firstAttribute="top" secondItem="JKO-B1-TLR" secondAttribute="bottom" constant="5" id="wcF-xy-bnn"/>
-                            <constraint firstItem="xyF-Vb-rBp" firstAttribute="centerX" secondItem="YMU-3d-bC3" secondAttribute="centerX" id="wnC-jx-YgH"/>
+                            <constraint firstItem="YMU-3d-bC3" firstAttribute="bottom" secondItem="X0g-0G-HYO" secondAttribute="bottom" id="Bhi-id-fE9"/>
+                            <constraint firstItem="X0g-0G-HYO" firstAttribute="leading" secondItem="DZu-TX-Cjj" secondAttribute="leading" id="Ebq-sU-cCA"/>
+                            <constraint firstItem="YMU-3d-bC3" firstAttribute="trailing" secondItem="X0g-0G-HYO" secondAttribute="trailing" id="KNq-fA-def"/>
+                            <constraint firstItem="X0g-0G-HYO" firstAttribute="top" secondItem="DZu-TX-Cjj" secondAttribute="top" id="bB7-Aj-KwL"/>
+                            <constraint firstItem="UTD-xS-whj" firstAttribute="height" secondItem="DZu-TX-Cjj" secondAttribute="height" constant="-80" id="xb9-No-lMD"/>
+                            <constraint firstItem="UTD-xS-whj" firstAttribute="width" secondItem="DZu-TX-Cjj" secondAttribute="width" id="ygu-2j-2iy"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YMU-3d-bC3"/>
                     </view>
@@ -381,7 +405,7 @@
                     <connections>
                         <outlet property="chooseImageButton" destination="tr9-iS-H30" id="nkN-62-rvJ"/>
                         <outlet property="chosenImage" destination="7qF-sw-eaN" id="2bn-6Z-x5y"/>
-                        <outlet property="chosenImageHeightConstraint" destination="txx-zP-s2w" id="IUN-mA-0tj"/>
+                        <outlet property="chosenImageHeightConstraint" destination="0Kh-qQ-Bn2" id="E3O-wF-eyE"/>
                         <outlet property="sellSubmitButton" destination="xyF-Vb-rBp" id="Q1G-dY-nwy"/>
                         <outlet property="textbookAuthorField" destination="HnJ-Vc-oPU" id="X5p-mo-Q4X"/>
                         <outlet property="textbookConditionField" destination="dll-VW-oQV" id="6dF-OQ-hJc"/>
