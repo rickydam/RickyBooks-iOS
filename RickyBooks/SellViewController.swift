@@ -47,6 +47,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     @IBOutlet weak var chosenImage: UIImageView!
     @IBOutlet weak var chosenImageHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +62,17 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         createLists()
         createPickers()
         createToolbars()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc private func keyboardWillShow(_ sender: NSNotification) {
+        scrollViewBottomConstraint.constant = 170
+    }
+    
+    @objc private func keyboardWillHide(_ sender: NSNotification) {
+        scrollViewBottomConstraint.constant = 0
     }
     
     @IBAction func onChooseImagePressed(_ sender: UIButton) {
