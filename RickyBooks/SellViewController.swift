@@ -45,6 +45,8 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var sellSubmitButton: UIButton!
     @IBOutlet weak var chooseImageButton: UIButton!
     
+    var chosenImageExtension: String.SubSequence!
+    var chosenImageData: UIImage!
     @IBOutlet weak var chosenImage: UIImageView!
     @IBOutlet weak var chosenImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
@@ -96,7 +98,6 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     func clearImage() {
         chosenImage.frame.size.height = 0
         chosenImageHeightConstraint.constant = 0
-        chosenImage.image = nil
         chooseImageButton.setTitle("Choose Image", for: .normal)
         chooseImageButton.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
     }
@@ -106,6 +107,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         chosenImageHeightConstraint.constant = 150
         chosenImage.contentMode = .scaleAspectFit
         chosenImage.image = imageData
+        chosenImageData = imageData
         chooseImageButton.setTitle("Delete Image", for: .normal)
         chooseImageButton.backgroundColor = UIColor(red: 190/255, green: 38/255, blue: 37/255, alpha: 1)
         self.dismiss(animated: true, completion: nil)
@@ -114,10 +116,19 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let imageData = info[UIImagePickerControllerOriginalImage] as? UIImage {
             setImage(imageData: imageData)
+            if let imgUrl = info[UIImagePickerControllerImageURL] as? URL {
+                let imgName = imgUrl.lastPathComponent
+                let index = imgName.index(imgName.index(of: ".")!, offsetBy: 1)
+                chosenImageExtension = imgName[index...]
+            }
         }
     }
     
     @IBAction func onSubmitPressed(_ sender: UIButton) {
+        postTextbook()
+    }
+    
+    func postTextbook() {
         let titleInput = textbookTitleField.text!
         let authorInput = textbookAuthorField.text!
         let editionInput = textbookEditionField.text!
@@ -170,6 +181,10 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
                     DispatchQueue.main.async {
                         self.clearAll(self)
                         self.present(alert, animated: true, completion: nil)
+                    }
+                    if(self.chosenImage.image != nil) {
+                        let textbookId = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
+                        self.getSignedPutUrl(textbookId: textbookId)
                     }
                 }
                 else if(statusCode == 422) {
@@ -279,7 +294,61 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
             } catch let jsonError {
                 print("Error with JSONDecoder", jsonError)
             }
-        }.resume()
+            }.resume()
+    }
+    
+    func getSignedPutUrl(textbookId: String) {
+        let endpoint = "https://rickybooks.herokuapp.com/aws/" + textbookId + "/" + chosenImageExtension
+        var request = URLRequest(url: URL(string: endpoint)!)
+        request.httpMethod = "GET"
+        let keychain = Keychain(service: "com.rickybooks.rickybooks")
+        request.setValue("Token token=" + keychain["token"]!, forHTTPHeaderField: "Authorization")
+        let requestTask = URLSession.shared.dataTask(with: request) {(data, response, error) in
+            guard let data = data else {
+                print("Error with the data received.")
+                return
+            }
+            let rawUrlData = String(data: data, encoding: String.Encoding.utf8)!
+            let fixedUrlData = (rawUrlData.replacingOccurrences(of: "\\u0026", with: "&")).replacingOccurrences(of: "\"", with: "")
+            self.putImageAws(fixedUrlData: fixedUrlData)
+        }
+        requestTask.resume()
+    }
+    
+    func putImageAws(fixedUrlData: String) {
+        guard let signedPutUrl = URL(string: fixedUrlData) else {
+            print("Error creating the signed PUT URL.")
+            return
+        }
+        var request = URLRequest(url: signedPutUrl)
+        request.httpMethod = "PUT"
+        
+        var imageData: Data?
+        if(chosenImageExtension == "jpeg") {
+            if let jpegData = UIImageJPEGRepresentation(chosenImageData, 0.6) {
+                imageData = jpegData
+            }
+            else {
+                print("Error creating the JPEG.")
+            }
+        }
+        else if(chosenImageExtension == "png") {
+            if let pngData = UIImagePNGRepresentation(chosenImageData) {
+                imageData = pngData
+            }
+            else {
+                print("Error creating the PNG.")
+            }
+        }
+        else {
+            print("Unknown image file type.")
+        }
+        request.httpBody = imageData
+        
+        let requestTask = URLSession.shared.dataTask(with: request) {(data, error, response) in
+            print("Successfully posted image to AWS.")
+        }
+        requestTask.resume()
     }
     
     @IBAction func courseTextChange(_ sender: Any) {
