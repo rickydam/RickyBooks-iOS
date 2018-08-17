@@ -406,6 +406,7 @@
                         <outlet property="chooseImageButton" destination="tr9-iS-H30" id="nkN-62-rvJ"/>
                         <outlet property="chosenImage" destination="7qF-sw-eaN" id="2bn-6Z-x5y"/>
                         <outlet property="chosenImageHeightConstraint" destination="0Kh-qQ-Bn2" id="E3O-wF-eyE"/>
+                        <outlet property="scrollViewBottomConstraint" destination="Bhi-id-fE9" id="jed-LD-Lbl"/>
                         <outlet property="sellSubmitButton" destination="xyF-Vb-rBp" id="Q1G-dY-nwy"/>
                         <outlet property="textbookAuthorField" destination="HnJ-Vc-oPU" id="X5p-mo-Q4X"/>
                         <outlet property="textbookConditionField" destination="dll-VW-oQV" id="6dF-OQ-hJc"/>
