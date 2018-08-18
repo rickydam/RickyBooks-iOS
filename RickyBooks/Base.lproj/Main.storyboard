@@ -47,10 +47,28 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--Buy Navigation Controller-->
+        <scene sceneID="AQH-Eu-vd1">
+            <objects>
+                <navigationController storyboardIdentifier="Buy" title="Buy Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" id="8OK-nz-d3n" userLabel="Buy Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r5a-cw-WOo">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oer-u4-Nr6" kind="relationship" relationship="rootViewController" id="MVS-86-bH1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FP4-c0-Oto" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.60000000000002" y="359.37031484257875"/>
+        </scene>
         <!--Buy View Controller-->
         <scene sceneID="M1x-kf-oZA">
             <objects>
-                <tableViewController storyboardIdentifier="Buy" title="Buy View Controller" id="oer-u4-Nr6" userLabel="Buy View Controller" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Buy View Controller" id="oer-u4-Nr6" userLabel="Buy View Controller" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,10 +190,11 @@
                             <outlet property="delegate" destination="oer-u4-Nr6" id="9Tg-rh-YFt"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Buy a textbook!" id="JB4-ei-8b0"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
         </scene>
         <!--Messages View Controller-->
         <scene sceneID="JGa-dA-P5C">
