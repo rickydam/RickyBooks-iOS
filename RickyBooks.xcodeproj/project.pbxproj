@@ -12,6 +12,7 @@
 		AD9EC3811800181104EC7E67 /* Pods_RickyBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D3910B7EABDA851566C1DC /* Pods_RickyBooksUITests.framework */; };
 		FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA085CBE21140369005C8DE9 /* SellViewController.swift */; };
 		FA085CC1211411FB005C8DE9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */; };
+		FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */; };
 		FA4A2C9421162AC5003E7F5F /* BuyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A2C9321162AC5003E7F5F /* BuyTableViewController.swift */; };
 		FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7005C0211DF46400513E7F /* TabBarController.swift */; };
 		FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */; };
@@ -54,6 +55,7 @@
 		F0C66DD2B30BBD0389108AA8 /* Pods-RickyBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickyBooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RickyBooksTests/Pods-RickyBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA085CBE21140369005C8DE9 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FA4A2C9321162AC5003E7F5F /* BuyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyTableViewController.swift; sourceTree = "<group>"; };
 		FA7005C0211DF46400513E7F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				FA7005C0211DF46400513E7F /* TabBarController.swift */,
 				FA9CA305211276E200AED111 /* HomeViewController.swift */,
 				FA4A2C9321162AC5003E7F5F /* BuyTableViewController.swift */,
+				FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */,
 				FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */,
 				FA085CBE21140369005C8DE9 /* SellViewController.swift */,
 				FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */,
@@ -397,6 +400,7 @@
 			files = (
 				FA085CC1211411FB005C8DE9 /* ProfileViewController.swift in Sources */,
 				FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */,
+				FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */,
 				FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */,
 				FA4A2C9421162AC5003E7F5F /* BuyTableViewController.swift in Sources */,
 				FA9CA304211276E200AED111 /* AppDelegate.swift in Sources */,
