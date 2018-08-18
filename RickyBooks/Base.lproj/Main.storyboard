@@ -190,7 +190,9 @@
                             <outlet property="delegate" destination="oer-u4-Nr6" id="9Tg-rh-YFt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Buy a textbook!" id="JB4-ei-8b0"/>
+                    <navigationItem key="navigationItem" title="Buy a textbook!" id="JB4-ei-8b0">
+                        <barButtonItem key="backBarButtonItem" title="Buy" id="Z6I-cK-8Pd"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
