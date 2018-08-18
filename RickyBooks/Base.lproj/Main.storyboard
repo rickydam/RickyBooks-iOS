@@ -196,6 +196,22 @@
             </objects>
             <point key="canvasLocation" x="1688.8" y="359.37031484257875"/>
         </scene>
+        <!--Details View Controller-->
+        <scene sceneID="SYi-ZM-RQF">
+            <objects>
+                <viewController storyboardIdentifier="Details" title="Details View Controller" id="MdZ-uY-meR" userLabel="Details View Controller" customClass="DetailsViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tBl-8M-UMz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mym-Dc-Aic"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Details" id="kHE-sD-gYF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTq-rh-qkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2633" y="359"/>
+        </scene>
         <!--Messages View Controller-->
         <scene sceneID="JGa-dA-P5C">
             <objects>
