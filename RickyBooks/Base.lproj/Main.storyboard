@@ -193,6 +193,9 @@
                     <navigationItem key="navigationItem" title="Buy a textbook!" id="JB4-ei-8b0">
                         <barButtonItem key="backBarButtonItem" title="Buy" id="Z6I-cK-8Pd"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="MdZ-uY-meR" kind="show" identifier="BuyToDetails" id="YeN-kV-H2B"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MUn-eB-VFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
