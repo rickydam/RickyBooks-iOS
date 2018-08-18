@@ -94,6 +94,10 @@ class BuyTableViewController: UITableViewController {
         return textbooks.count
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "BuyToDetails", sender: self)
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookCell", for: indexPath) as! TextbookTableViewCell
         
