@@ -98,6 +98,28 @@ class BuyTableViewController: UITableViewController {
         performSegue(withIdentifier: "BuyToDetails", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "BuyToDetails") {
+            if let detailsVC = segue.destination as? DetailsViewController {
+                if let indexPath = self.tableView.indexPathForSelectedRow {
+                    let textbook = textbooks[indexPath.row]
+                    if let cell = self.tableView.cellForRow(at: indexPath) as? TextbookTableViewCell {
+                        detailsVC.detailsImageData = cell.textbookImageView.image!
+                    }
+                    detailsVC.detailsTitleText = textbook.textbook_title
+                    detailsVC.detailsAuthorText = textbook.textbook_author
+                    detailsVC.detailsEditionText = textbook.textbook_edition
+                    detailsVC.detailsConditionText = textbook.textbook_condition
+                    detailsVC.detailsTypeText = textbook.textbook_type
+                    detailsVC.detailsCoursecodeText = textbook.textbook_coursecode
+                    detailsVC.detailsPriceText = "$ " + textbook.textbook_price
+                    detailsVC.detailsTimestampText = textbook.created_at
+                    detailsVC.detailsSellerText = textbook.user.name
+                }
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookCell", for: indexPath) as! TextbookTableViewCell
         
