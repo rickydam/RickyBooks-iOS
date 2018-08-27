@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct Image: Decodable {
-    var url: String
-}
-
 class GetTextbooks {
     private var textbooks = [Textbook]()
     
