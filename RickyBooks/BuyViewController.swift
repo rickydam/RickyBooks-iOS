@@ -1,5 +1,5 @@
 //
-//  BuyTableViewController.swift
+//  BuyViewController.swift
 //  RickyBooks
 //
 //  Created by Ricky Dam on 2018-08-04.
@@ -22,7 +22,7 @@ class TextbookTableViewCell: UITableViewCell {
     @IBOutlet weak var textbookImageView: UIImageView!
 }
 
-class BuyTableViewController: UITableViewController {
+class BuyViewController: UITableViewController {
     private var textbooks = [Textbook]()
     
     override func viewDidLoad() {
