@@ -155,6 +155,7 @@
 		FA9CA302211276E200AED111 /* RickyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3F3C21349FFC0001F9EA /* Functions */,
 				FAFD3F3721349C640001F9EA /* Decodables */,
 				FAFD3F3221346D9E0001F9EA /* Services */,
 				FA9CA303211276E200AED111 /* AppDelegate.swift */,
@@ -206,6 +207,13 @@
 				FAFD3F3A21349CFA0001F9EA /* UserData.swift */,
 			);
 			path = Decodables;
+			sourceTree = "<group>";
+		};
+		FAFD3F3C21349FFC0001F9EA /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Functions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
