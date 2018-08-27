@@ -26,6 +26,7 @@
 		FAE41C0E21196AD40001B6B3 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */; };
 		FAFD3F3421346E0A0001F9EA /* GetTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */; };
 		FAFD3F3B21349CFA0001F9EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3A21349CFA0001F9EA /* UserData.swift */; };
+		FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3D2134A06C0001F9EA /* SuccessfulAuthorization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
 		FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTextbooks.swift; sourceTree = "<group>"; };
 		FAFD3F3A21349CFA0001F9EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FAFD3F3D2134A06C0001F9EA /* SuccessfulAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulAuthorization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 		FAFD3F3C21349FFC0001F9EA /* Functions */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3F3D2134A06C0001F9EA /* SuccessfulAuthorization.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				FAE41C0E21196AD40001B6B3 /* AuthorizeViewController.swift in Sources */,
 				FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */,
 				FA9CA306211276E200AED111 /* HomeViewController.swift in Sources */,
+				FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
