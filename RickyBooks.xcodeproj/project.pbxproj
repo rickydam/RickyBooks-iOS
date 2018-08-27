@@ -24,6 +24,7 @@
 		FA9CA31B211276E300AED111 /* RickyBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA31A211276E300AED111 /* RickyBooksTests.swift */; };
 		FA9CA326211276E300AED111 /* RickyBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA325211276E300AED111 /* RickyBooksUITests.swift */; };
 		FAE41C0E21196AD40001B6B3 /* AuthorizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */; };
+		FAFD3F3421346E0A0001F9EA /* GetTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		FA9CA325211276E300AED111 /* RickyBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickyBooksUITests.swift; sourceTree = "<group>"; };
 		FA9CA327211276E300AED111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizeViewController.swift; sourceTree = "<group>"; };
+		FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTextbooks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,9 @@
 		};
 		FAFD3F3221346D9E0001F9EA /* Services */ = {
 			isa = PBXGroup;
+			children = (
+				FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */,
+			);
 			path = Services;
 			sourceTree = "<group>";
 		};
@@ -408,6 +413,7 @@
 				FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */,
 				FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */,
 				FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */,
+				FAFD3F3421346E0A0001F9EA /* GetTextbooks.swift in Sources */,
 				FA4A2C9421162AC5003E7F5F /* BuyTableViewController.swift in Sources */,
 				FA9CA304211276E200AED111 /* AppDelegate.swift in Sources */,
 				FAE41C0E21196AD40001B6B3 /* AuthorizeViewController.swift in Sources */,
