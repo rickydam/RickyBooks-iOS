@@ -28,6 +28,7 @@
 		FAFD3F36213489920001F9EA /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F35213489920001F9EA /* Login.swift */; };
 		FAFD3F3B21349CFA0001F9EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3A21349CFA0001F9EA /* UserData.swift */; };
 		FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3D2134A06C0001F9EA /* SuccessfulAuthorization.swift */; };
+		FAFD3F402134C1A70001F9EA /* Textbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3F2134C1A70001F9EA /* Textbook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		FAFD3F35213489920001F9EA /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		FAFD3F3A21349CFA0001F9EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		FAFD3F3D2134A06C0001F9EA /* SuccessfulAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulAuthorization.swift; sourceTree = "<group>"; };
+		FAFD3F3F2134C1A70001F9EA /* Textbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textbook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				FAFD3F3A21349CFA0001F9EA /* UserData.swift */,
+				FAFD3F3F2134C1A70001F9EA /* Textbook.swift */,
 			);
 			path = Decodables;
 			sourceTree = "<group>";
@@ -445,6 +448,7 @@
 				FAE41C0E21196AD40001B6B3 /* AuthorizeViewController.swift in Sources */,
 				FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */,
 				FAFD3F36213489920001F9EA /* Login.swift in Sources */,
+				FAFD3F402134C1A70001F9EA /* Textbook.swift in Sources */,
 				FA9CA306211276E200AED111 /* HomeViewController.swift in Sources */,
 				FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */,
 			);
