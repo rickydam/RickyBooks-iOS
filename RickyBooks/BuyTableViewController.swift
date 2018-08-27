@@ -9,29 +9,6 @@
 import UIKit
 import Kingfisher
 
-struct Textbook: Decodable {
-    var id: Int
-    var textbook_title: String
-    var textbook_author: String
-    var textbook_edition: String
-    var textbook_condition: String
-    var textbook_type: String
-    var textbook_coursecode: String
-    var textbook_price: String
-    var created_at: String
-    var user_id: Int
-    var user: User
-    var images: [Image]
-}
-
-struct User: Decodable {
-    var name: String
-}
-
-struct Image: Decodable {
-    var url: String
-}
-
 class TextbookTableViewCell: UITableViewCell {
     @IBOutlet weak var textbookTitleLabel: UILabel!
     @IBOutlet weak var textbookAuthorLabel: UILabel!
@@ -51,34 +28,22 @@ class BuyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(getTextbooks(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(getTextbooksReq(_:)), for: .valueChanged)
         self.refreshControl = refreshControl
-        getTextbooks((Any).self)
+        getTextbooksReq((Any).self)
     }
     
-    @objc private func getTextbooks(_ sender: Any) {
-        let urlString = "https://rickybooks.herokuapp.com/textbooks"
-        guard let url = URL(string: urlString) else {
-            print("Error creating the URL")
-            return
-        }
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else {
-                print("Error with the data received")
-                return
-            }
-            do {
-                self.textbooks = try JSONDecoder().decode([Textbook].self, from: data)
-            } catch let jsonError {
-                print("Error with JSONDecoder", jsonError)
-            }
-            DispatchQueue.main.sync {
+    @objc private func getTextbooksReq(_ sender: Any) {
+        let getTextbooks = GetTextbooks()
+        getTextbooks.req(withCompletion: {
+            self.textbooks = getTextbooks.getData()
+            DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.refreshControl?.endRefreshing()
             }
-        }.resume()
+        })
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
