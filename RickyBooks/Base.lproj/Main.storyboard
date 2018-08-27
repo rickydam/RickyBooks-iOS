@@ -68,7 +68,7 @@
         <!--Buy View Controller-->
         <scene sceneID="M1x-kf-oZA">
             <objects>
-                <tableViewController title="Buy View Controller" id="oer-u4-Nr6" userLabel="Buy View Controller" customClass="BuyTableViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Buy View Controller" id="oer-u4-Nr6" userLabel="Buy View Controller" customClass="BuyViewController" customModule="RickyBooks" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="61o-Gr-r6t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
