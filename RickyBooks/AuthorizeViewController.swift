@@ -16,12 +16,6 @@ struct RegisterErrors: Decodable {
     var password_confirmation: Array<String>?
 }
 
-struct UserData: Decodable {
-    var token: String
-    var user_id: Int
-    var name: String
-}
-
 class AuthorizeViewController: UIViewController {
     @IBOutlet weak var registerLoginSegment: UISegmentedControl!
     
