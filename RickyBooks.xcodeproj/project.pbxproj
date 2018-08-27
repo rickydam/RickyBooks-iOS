@@ -151,6 +151,7 @@
 		FA9CA302211276E200AED111 /* RickyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD3F3221346D9E0001F9EA /* Services */,
 				FA9CA303211276E200AED111 /* AppDelegate.swift */,
 				FA7005C0211DF46400513E7F /* TabBarController.swift */,
 				FA9CA305211276E200AED111 /* HomeViewController.swift */,
@@ -184,6 +185,11 @@
 				FA9CA327211276E300AED111 /* Info.plist */,
 			);
 			path = RickyBooksUITests;
+			sourceTree = "<group>";
+		};
+		FAFD3F3221346D9E0001F9EA /* Services */ = {
+			isa = PBXGroup;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
