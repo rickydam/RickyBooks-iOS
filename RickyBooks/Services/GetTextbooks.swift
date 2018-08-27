@@ -8,10 +8,6 @@
 
 import UIKit
 
-struct User: Decodable {
-    var name: String
-}
-
 struct Image: Decodable {
     var url: String
 }
