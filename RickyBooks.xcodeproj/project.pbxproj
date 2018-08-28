@@ -31,6 +31,7 @@
 		FAFD3F402134C1A70001F9EA /* Textbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F3F2134C1A70001F9EA /* Textbook.swift */; };
 		FAFD3F422134C29B0001F9EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F412134C29B0001F9EA /* User.swift */; };
 		FAFD3F442134C2EB0001F9EA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F432134C2EB0001F9EA /* Image.swift */; };
+		FAFD3F462134C43B0001F9EA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F452134C43B0001F9EA /* Register.swift */; };
 		FAFD3F482134C8C40001F9EA /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */; };
 		FAFD3F4A2134CD190001F9EA /* CreateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F492134CD190001F9EA /* CreateAlert.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		FAFD3F3F2134C1A70001F9EA /* Textbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textbook.swift; sourceTree = "<group>"; };
 		FAFD3F412134C29B0001F9EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FAFD3F432134C2EB0001F9EA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		FAFD3F452134C43B0001F9EA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		FAFD3F492134CD190001F9EA /* CreateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,6 +214,7 @@
 			children = (
 				FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */,
 				FAFD3F35213489920001F9EA /* Login.swift */,
+				FAFD3F452134C43B0001F9EA /* Register.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA085CC1211411FB005C8DE9 /* ProfileViewController.swift in Sources */,
+				FAFD3F462134C43B0001F9EA /* Register.swift in Sources */,
 				FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */,
 				FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */,
 				FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */,
