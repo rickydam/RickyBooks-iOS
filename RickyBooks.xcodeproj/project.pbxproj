@@ -34,6 +34,7 @@
 		FAFD3F462134C43B0001F9EA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F452134C43B0001F9EA /* Register.swift */; };
 		FAFD3F482134C8C40001F9EA /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */; };
 		FAFD3F4A2134CD190001F9EA /* CreateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F492134CD190001F9EA /* CreateAlert.swift */; };
+		FAFD3F4C213500F40001F9EA /* PostTextbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F4B213500F40001F9EA /* PostTextbook.swift */; };
 		FAFD3F4E213507350001F9EA /* PostTextbookErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F4D213507350001F9EA /* PostTextbookErrors.swift */; };
 		FAFD3F50213507760001F9EA /* PostTextbookErrorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F4F213507760001F9EA /* PostTextbookErrorsData.swift */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		FAFD3F452134C43B0001F9EA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		FAFD3F492134CD190001F9EA /* CreateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlert.swift; sourceTree = "<group>"; };
+		FAFD3F4B213500F40001F9EA /* PostTextbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextbook.swift; sourceTree = "<group>"; };
 		FAFD3F4D213507350001F9EA /* PostTextbookErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextbookErrors.swift; sourceTree = "<group>"; };
 		FAFD3F4F213507760001F9EA /* PostTextbookErrorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextbookErrorsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +221,7 @@
 				FAFD3F3321346E0A0001F9EA /* GetTextbooks.swift */,
 				FAFD3F35213489920001F9EA /* Login.swift */,
 				FAFD3F452134C43B0001F9EA /* Register.swift */,
+				FAFD3F4B213500F40001F9EA /* PostTextbook.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -479,6 +482,7 @@
 				FAFD3F4E213507350001F9EA /* PostTextbookErrors.swift in Sources */,
 				FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */,
 				FAFD3F482134C8C40001F9EA /* RegisterErrors.swift in Sources */,
+				FAFD3F4C213500F40001F9EA /* PostTextbook.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
