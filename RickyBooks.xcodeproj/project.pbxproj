@@ -34,6 +34,7 @@
 		FAFD3F462134C43B0001F9EA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F452134C43B0001F9EA /* Register.swift */; };
 		FAFD3F482134C8C40001F9EA /* RegisterErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */; };
 		FAFD3F4A2134CD190001F9EA /* CreateAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F492134CD190001F9EA /* CreateAlert.swift */; };
+		FAFD3F4E213507350001F9EA /* PostTextbookErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F4D213507350001F9EA /* PostTextbookErrors.swift */; };
 		FAFD3F50213507760001F9EA /* PostTextbookErrorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFD3F4F213507760001F9EA /* PostTextbookErrorsData.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		FAFD3F452134C43B0001F9EA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterErrors.swift; sourceTree = "<group>"; };
 		FAFD3F492134CD190001F9EA /* CreateAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAlert.swift; sourceTree = "<group>"; };
+		FAFD3F4D213507350001F9EA /* PostTextbookErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextbookErrors.swift; sourceTree = "<group>"; };
 		FAFD3F4F213507760001F9EA /* PostTextbookErrorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTextbookErrorsData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 				FAFD3F412134C29B0001F9EA /* User.swift */,
 				FAFD3F432134C2EB0001F9EA /* Image.swift */,
 				FAFD3F472134C8C40001F9EA /* RegisterErrors.swift */,
+				FAFD3F4D213507350001F9EA /* PostTextbookErrors.swift */,
 				FAFD3F4F213507760001F9EA /* PostTextbookErrorsData.swift */,
 			);
 			path = Decodables;
@@ -473,6 +476,7 @@
 				FAFD3F402134C1A70001F9EA /* Textbook.swift in Sources */,
 				FAFD3F50213507760001F9EA /* PostTextbookErrorsData.swift in Sources */,
 				FA9CA306211276E200AED111 /* HomeViewController.swift in Sources */,
+				FAFD3F4E213507350001F9EA /* PostTextbookErrors.swift in Sources */,
 				FAFD3F3E2134A06C0001F9EA /* SuccessfulAuthorization.swift in Sources */,
 				FAFD3F482134C8C40001F9EA /* RegisterErrors.swift in Sources */,
 			);
