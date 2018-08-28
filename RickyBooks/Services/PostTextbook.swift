@@ -10,7 +10,7 @@ import UIKit
 import KeychainAccess
 
 class PostTextbook {
-    private var textbookId = String()
+    private var textbookId: String?
     
     func req(sellViewController: SellViewController, titleInput: String, authorInput: String, editionInput: String, conditionInput: String, typeInput: String, coursecodeInput: String, priceInput: String, withCompletion completion: @escaping (() -> Void)) {
         let endpoint = "https://rickybooks.herokuapp.com/textbooks"
@@ -54,6 +54,9 @@ class PostTextbook {
                     if(hasImage) {
                         self.textbookId = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
                         completion()
+                    }
+                    else {
+                        self.textbookId = nil
                     }
                 }
                 else if(statusCode == 422) {
@@ -167,6 +170,6 @@ class PostTextbook {
     }
     
     func getData() -> String {
-        return textbookId
+        return textbookId!
     }
 }
