@@ -13,7 +13,7 @@ class GetSignedPutUrl {
     private var signedPutUrl = String()
     
     func req(textbookId: String, chosenImageExtension: String.SubSequence, withCompletion completion: @escaping (() -> Void)) {
-        let endpoint = "https://rickybooks.herokuapp.com/aws/" + textbookId + "/" + chosenImageExtension
+        let endpoint = getBaseUrl() + "/aws/" + textbookId + "/" + chosenImageExtension
         var request = URLRequest(url: URL(string: endpoint)!)
         request.httpMethod = "GET"
         let keychain = Keychain(service: "com.rickybooks.rickybooks")

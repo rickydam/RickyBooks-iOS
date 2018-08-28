@@ -9,7 +9,7 @@
 import UIKit
 
 func login(tabBarController: UITabBarController, emailInput: String, passwordInput: String) {
-    let endpoint = "https://rickybooks.herokuapp.com/login"
+    let endpoint = getBaseUrl() + "/login"
     var request = URLRequest(url: URL(string: endpoint)!)
     request.httpMethod = "POST"
     request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

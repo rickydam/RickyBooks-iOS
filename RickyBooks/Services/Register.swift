@@ -9,7 +9,7 @@
 import UIKit
 
 func register(tabBarController: UITabBarController, nameInput: String, emailInput: String, passwordInput: String, confirmPasswordInput: String) {
-    let endpoint = "https://rickybooks.herokuapp.com/users"
+    let endpoint = getBaseUrl() + "/users"
     var request = URLRequest(url: URL(string: endpoint)!)
     request.httpMethod = "POST"
     request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

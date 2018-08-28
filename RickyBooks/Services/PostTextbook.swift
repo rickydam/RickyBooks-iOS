@@ -13,7 +13,7 @@ class PostTextbook {
     private var textbookId: String?
     
     func req(sellViewController: SellViewController, titleInput: String, authorInput: String, editionInput: String, conditionInput: String, typeInput: String, coursecodeInput: String, priceInput: String, withCompletion completion: @escaping (() -> Void)) {
-        let endpoint = "https://rickybooks.herokuapp.com/textbooks"
+        let endpoint = getBaseUrl() + "/textbooks"
         var request = URLRequest(url: URL(string: endpoint)!)
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

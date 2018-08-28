@@ -12,8 +12,8 @@ class GetTextbooks {
     private var textbooks = [Textbook]()
     
     func req(withCompletion completion: @escaping (() -> Void)) {
-        let urlString = "https://rickybooks.herokuapp.com/textbooks"
-        guard let url = URL(string: urlString) else {
+        let endpoint = getBaseUrl() + "/textbooks"
+        guard let url = URL(string: endpoint) else {
             print("Error creating the URL")
             return
         }
