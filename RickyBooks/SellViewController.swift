@@ -123,26 +123,16 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         let postTextbook = PostTextbook()
         postTextbook.req(sellViewController: self, titleInput: titleInput, authorInput: authorInput, editionInput: editionInput, conditionInput: conditionInput, typeInput: typeInput, coursecodeInput: coursecodeInput, priceInput: priceInput, withCompletion: {
-            
-        })
-    }
-    
-    func getSignedPutUrl(textbookId: String) {
-        let endpoint = "https://rickybooks.herokuapp.com/aws/" + textbookId + "/" + chosenImageExtension
-        var request = URLRequest(url: URL(string: endpoint)!)
-        request.httpMethod = "GET"
-        let keychain = Keychain(service: "com.rickybooks.rickybooks")
-        request.setValue("Token token=" + keychain["token"]!, forHTTPHeaderField: "Authorization")
-        let requestTask = URLSession.shared.dataTask(with: request) {(data, response, error) in
-            guard let data = data else {
-                print("Error with the data received.")
-                return
+            var textbookId: String?
+            textbookId = postTextbook.getData()
+            if textbookId != nil {
+                let getSignedPutUrl = GetSignedPutUrl()
+                getSignedPutUrl.req(textbookId: textbookId!, chosenImageExtension: self.chosenImageExtension, withCompletion: {
+                    let signedPutUrl = getSignedPutUrl.getData()
+                    
+                })
             }
-            let rawUrlData = String(data: data, encoding: String.Encoding.utf8)!
-            let fixedUrlData = (rawUrlData.replacingOccurrences(of: "\\u0026", with: "&")).replacingOccurrences(of: "\"", with: "")
-            self.putImageAws(fixedUrlData: fixedUrlData)
-        }
-        requestTask.resume()
+        })
     }
     
     func putImageAws(fixedUrlData: String) {
