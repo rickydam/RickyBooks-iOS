@@ -9,22 +9,6 @@
 import UIKit
 import KeychainAccess
 
-struct PostTextbookErrors: Decodable {
-    var status: String?
-    var message: String?
-    var data: PostTextbookErrorsData
-}
-
-struct PostTextbookErrorsData: Decodable {
-    var textbook_title: Array<String>?
-    var textbook_author: Array<String>?
-    var textbook_edition: Array<String>?
-    var textbook_condition: Array<String>?
-    var textbook_type: Array<String>?
-    var textbook_coursecode: Array<String>?
-    var textbook_price: Array<String>?
-}
-
 class SellViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     @IBOutlet weak var textbookTitleField: UITextField!
     @IBOutlet weak var textbookAuthorField: UITextField!
@@ -137,164 +121,10 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         let coursecodeInput = textbookCoursecodeField.text!
         let priceInput = textbookPriceField.text!
         
-        let endpoint = "https://rickybooks.herokuapp.com/textbooks"
-        var request = URLRequest(url: URL(string: endpoint)!)
-        request.httpMethod = "POST"
-        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        let keychain = Keychain(service: "com.rickybooks.rickybooks")
-        request.setValue("Token token=" + keychain["token"]!, forHTTPHeaderField: "Authorization")
-        let textbookDictionary: [String: Any] = [
-            "user_id": keychain["user_id"]!,
-            "textbook_title": titleInput,
-            "textbook_author": authorInput,
-            "textbook_edition": editionInput,
-            "textbook_condition": conditionInput,
-            "textbook_type": typeInput,
-            "textbook_coursecode": coursecodeInput,
-            "textbook_price": priceInput
-        ]
-        guard let obj = try? JSONSerialization.data(withJSONObject: textbookDictionary, options: []) else {
-            print("Error with textbook obj JSONSerialization")
-            return
-        }
-        request.httpBody = obj
-        
-        URLSession.shared.dataTask(with: request) {(data, response, error) in
-            guard let data = data else {
-                print("Error with the data received")
-                return
-            }
-            do {
-                let statusCode = (response as? HTTPURLResponse)?.statusCode
-                if(statusCode == 200) {
-                    let alert = UIAlertController(title: "Success!", message: "Your textbook has been successfully posted!", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
-                        action in switch action.style {
-                        case .default:
-                            print("Default")
-                        case .cancel:
-                            print("Cancel")
-                        case .destructive:
-                            print("Destructive")
-                        }
-                    }))
-                    DispatchQueue.main.async {
-                        self.clearAll(self)
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                    if(self.chosenImage.image != nil) {
-                        let textbookId = NSString(data: data, encoding: String.Encoding.utf8.rawValue)! as String
-                        self.getSignedPutUrl(textbookId: textbookId)
-                    }
-                }
-                else if(statusCode == 422) {
-                    let errors = try JSONDecoder().decode(PostTextbookErrors.self, from: data)
-                    var errorMessage = ""
-                    
-                    let titleError = errors.data.textbook_title
-                    if(titleError != nil) {
-                        if(titleError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Title"
-                        }
-                    }
-                    
-                    let authorError = errors.data.textbook_author
-                    if(authorError != nil) {
-                        if(authorError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Author"
-                        }
-                    }
-                    
-                    let editionError = errors.data.textbook_edition
-                    if(editionError != nil) {
-                        if(editionError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Edition"
-                        }
-                    }
-                    
-                    let conditionError = errors.data.textbook_condition
-                    if(conditionError != nil) {
-                        if(conditionError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Condition"
-                        }
-                    }
-                    
-                    let typeError = errors.data.textbook_type
-                    if(typeError != nil) {
-                        if(typeError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Type"
-                        }
-                    }
-                    
-                    let coursecodeError = errors.data.textbook_coursecode
-                    if(coursecodeError != nil) {
-                        if(coursecodeError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Coursecode"
-                        }
-                    }
-                    
-                    let priceError = errors.data.textbook_price
-                    if(priceError != nil) {
-                        if(priceError![0] == "can't be blank") {
-                            if(errorMessage != "") {
-                                errorMessage += "\n"
-                            }
-                            errorMessage += "Missing: Textbook Price"
-                        }
-                    }
-                    
-                    let alert = UIAlertController(title: "Hmm.. you forgot something!", message: errorMessage, preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
-                        action in switch action.style {
-                        case .default:
-                            print("Default")
-                        case .cancel:
-                            print("Cancel")
-                        case .destructive:
-                            print("Destructive")
-                        }
-                    }))
-                    
-                    let paragraphStyle = NSMutableParagraphStyle()
-                    paragraphStyle.alignment = NSTextAlignment.left
-                    let leftAlignedMessage =  NSMutableAttributedString(
-                        string: errorMessage,
-                        attributes: [
-                            NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                            NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)
-                        ]
-                    )
-                    alert.setValue(leftAlignedMessage, forKey: "attributedMessage")
-                    
-                    DispatchQueue.main.async {
-                        self.present(alert, animated: true, completion: nil)
-                    }
-                }
-                else {
-                    print("Error with the response.")
-                }
-            } catch let jsonError {
-                print("Error with JSONDecoder", jsonError)
-            }
-            }.resume()
+        let postTextbook = PostTextbook()
+        postTextbook.req(sellViewController: self, titleInput: titleInput, authorInput: authorInput, editionInput: editionInput, conditionInput: conditionInput, typeInput: typeInput, coursecodeInput: coursecodeInput, priceInput: priceInput, withCompletion: {
+            
+        })
     }
     
     func getSignedPutUrl(textbookId: String) {
@@ -359,7 +189,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         enforceMaxLength(textField: textbookPriceField, maxLength: 3)
     }
     
-    @objc private func clearAll(_ sender: Any) {
+    @objc func clearAll(_ sender: Any) {
         textbookTitleField.text = ""
         textbookAuthorField.text = ""
         textbookEditionField.text = ""
