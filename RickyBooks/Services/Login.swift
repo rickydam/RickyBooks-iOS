@@ -37,21 +37,7 @@ func login(tabBarController: UITabBarController, emailInput: String, passwordInp
                 }
             }
             else if(statusCode == 401) {
-                let alert = UIAlertController(title: "Typo! Try again!", message: "Invalid email/password combination", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
-                    action in switch action.style {
-                    case .default:
-                        print("Default")
-                    case .cancel:
-                        print("Cancel")
-                    case .destructive:
-                        print("Destructive")
-                    }
-                }))
-                DispatchQueue.main.async {
-                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.window?.rootViewController?.present(alert, animated: true, completion: nil)
-                }
+                createAlert(title: "Typo! Try again!", message: "Invalid email/password combination")
             }
             else {
                 print("Error with the response")
