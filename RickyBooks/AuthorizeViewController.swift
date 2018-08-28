@@ -7,14 +7,6 @@
 //
 
 import UIKit
-import KeychainAccess
-
-struct RegisterErrors: Decodable {
-    var name: Array<String>?
-    var email: Array<String>?
-    var password: Array<String>?
-    var password_confirmation: Array<String>?
-}
 
 class AuthorizeViewController: UIViewController {
     @IBOutlet weak var registerLoginSegment: UISegmentedControl!
