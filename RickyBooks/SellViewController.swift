@@ -129,46 +129,10 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
                 let getSignedPutUrl = GetSignedPutUrl()
                 getSignedPutUrl.req(textbookId: textbookId!, chosenImageExtension: self.chosenImageExtension, withCompletion: {
                     let signedPutUrl = getSignedPutUrl.getData()
-                    
+                    putImageAws(signedPutUrlString: signedPutUrl, chosenImageExtension: self.chosenImageExtension, chosenImageData: self.chosenImageData)
                 })
             }
         })
-    }
-    
-    func putImageAws(fixedUrlData: String) {
-        guard let signedPutUrl = URL(string: fixedUrlData) else {
-            print("Error creating the signed PUT URL.")
-            return
-        }
-        var request = URLRequest(url: signedPutUrl)
-        request.httpMethod = "PUT"
-        
-        var imageData: Data?
-        if(chosenImageExtension == "jpeg") {
-            if let jpegData = UIImageJPEGRepresentation(chosenImageData, 0.6) {
-                imageData = jpegData
-            }
-            else {
-                print("Error creating the JPEG.")
-            }
-        }
-        else if(chosenImageExtension == "png") {
-            if let pngData = UIImagePNGRepresentation(chosenImageData) {
-                imageData = pngData
-            }
-            else {
-                print("Error creating the PNG.")
-            }
-        }
-        else {
-            print("Unknown image file type.")
-        }
-        request.httpBody = imageData
-        
-        let requestTask = URLSession.shared.dataTask(with: request) {(data, error, response) in
-            print("Successfully posted image to AWS.")
-        }
-        requestTask.resume()
     }
     
     @IBAction func courseTextChange(_ sender: Any) {
