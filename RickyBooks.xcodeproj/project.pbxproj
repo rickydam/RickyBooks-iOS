@@ -15,6 +15,7 @@
 		FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */; };
 		FA44930A2135F5B100C8FEB5 /* GetSignedPutUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */; };
 		FA44930C213601CE00C8FEB5 /* GetBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */; };
+		FA44930E2136245400C8FEB5 /* PutImageAws.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44930D2136245400C8FEB5 /* PutImageAws.swift */; };
 		FA4A2C9421162AC5003E7F5F /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */; };
 		FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7005C0211DF46400513E7F /* TabBarController.swift */; };
 		FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */; };
@@ -73,6 +74,7 @@
 		FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSignedPutUrl.swift; sourceTree = "<group>"; };
 		FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBaseUrl.swift; sourceTree = "<group>"; };
+		FA44930D2136245400C8FEB5 /* PutImageAws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutImageAws.swift; sourceTree = "<group>"; };
 		FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		FA7005C0211DF46400513E7F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				FAFD3F452134C43B0001F9EA /* Register.swift */,
 				FAFD3F4B213500F40001F9EA /* PostTextbook.swift */,
 				FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */,
+				FA44930D2136245400C8FEB5 /* PutImageAws.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA085CC1211411FB005C8DE9 /* ProfileViewController.swift in Sources */,
+				FA44930E2136245400C8FEB5 /* PutImageAws.swift in Sources */,
 				FA44930C213601CE00C8FEB5 /* GetBaseUrl.swift in Sources */,
 				FAFD3F462134C43B0001F9EA /* Register.swift in Sources */,
 				FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */,
