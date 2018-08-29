@@ -167,6 +167,13 @@
 		FA585DD821371AF2009BBC9E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CA305211276E200AED111 /* HomeViewController.swift */,
+				FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */,
+				FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */,
+				FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */,
+				FA085CBE21140369005C8DE9 /* SellViewController.swift */,
+				FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */,
+				FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -212,13 +219,6 @@
 				FA585DD821371AF2009BBC9E /* ViewControllers */,
 				FA9CA303211276E200AED111 /* AppDelegate.swift */,
 				FA7005C0211DF46400513E7F /* TabBarController.swift */,
-				FA9CA305211276E200AED111 /* HomeViewController.swift */,
-				FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */,
-				FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */,
-				FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */,
-				FA085CBE21140369005C8DE9 /* SellViewController.swift */,
-				FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */,
-				FAE41C0D21196AD40001B6B3 /* AuthorizeViewController.swift */,
 				FA9CA309211276E200AED111 /* Main.storyboard */,
 				FA9CA30C211276E300AED111 /* Assets.xcassets */,
 				FA9CA30E211276E300AED111 /* LaunchScreen.storyboard */,
