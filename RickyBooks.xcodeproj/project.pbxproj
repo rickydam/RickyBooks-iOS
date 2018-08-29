@@ -212,6 +212,9 @@
 		FA9CA302211276E200AED111 /* RickyBooks */ = {
 			isa = PBXGroup;
 			children = (
+				FA9CA30E211276E300AED111 /* LaunchScreen.storyboard */,
+				FA9CA311211276E300AED111 /* Info.plist */,
+				FA9CA30C211276E300AED111 /* Assets.xcassets */,
 				FA5DF97B21365FB600FA6E3C /* Cells */,
 				FAFD3F3C21349FFC0001F9EA /* Functions */,
 				FAFD3F3721349C640001F9EA /* Decodables */,
@@ -220,9 +223,6 @@
 				FA9CA303211276E200AED111 /* AppDelegate.swift */,
 				FA7005C0211DF46400513E7F /* TabBarController.swift */,
 				FA9CA309211276E200AED111 /* Main.storyboard */,
-				FA9CA30C211276E300AED111 /* Assets.xcassets */,
-				FA9CA30E211276E300AED111 /* LaunchScreen.storyboard */,
-				FA9CA311211276E300AED111 /* Info.plist */,
 			);
 			path = RickyBooks;
 			sourceTree = "<group>";
