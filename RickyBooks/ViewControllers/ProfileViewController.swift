@@ -24,16 +24,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         userTextbooksTableView.register(UINib(nibName: "TextbookCellNib", bundle: nil), forCellReuseIdentifier: "TextbookCell")
         
         let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(getTextbooksReq(_:)), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(getUserTextbooksReq(_:)), for: .valueChanged)
         userTextbooksTableView.refreshControl = refreshControl
         
         let logoutButton = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed(_:)))
         self.navigationItem.rightBarButtonItem = logoutButton
         
-        getTextbooksReq((Any).self)
+        getUserTextbooksReq((Any).self)
     }
     
-    @objc private func getTextbooksReq(_ sender: Any) {
+    @objc private func getUserTextbooksReq(_ sender: Any) {
         let getUserTextbooks = GetUserTextbooks()
         getUserTextbooks.req(withCompletion: {
             self.userTextbooks = getUserTextbooks.getData()
