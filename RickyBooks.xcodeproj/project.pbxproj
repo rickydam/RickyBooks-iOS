@@ -17,6 +17,7 @@
 		FA44930C213601CE00C8FEB5 /* GetBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */; };
 		FA44930E2136245400C8FEB5 /* PutImageAws.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44930D2136245400C8FEB5 /* PutImageAws.swift */; };
 		FA4A2C9421162AC5003E7F5F /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */; };
+		FA5DF978213656B800FA6E3C /* TextbookCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DF977213656B800FA6E3C /* TextbookCellNib.xib */; };
 		FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7005C0211DF46400513E7F /* TabBarController.swift */; };
 		FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */; };
 		FA9CA304211276E200AED111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA303211276E200AED111 /* AppDelegate.swift */; };
@@ -76,6 +77,7 @@
 		FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBaseUrl.swift; sourceTree = "<group>"; };
 		FA44930D2136245400C8FEB5 /* PutImageAws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PutImageAws.swift; sourceTree = "<group>"; };
 		FA4A2C9321162AC5003E7F5F /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		FA5DF977213656B800FA6E3C /* TextbookCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextbookCellNib.xib; sourceTree = "<group>"; };
 		FA7005C0211DF46400513E7F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		FA9CA300211276E200AED111 /* RickyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 		FA5DF97B21365FB600FA6E3C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				FA5DF977213656B800FA6E3C /* TextbookCellNib.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9CA310211276E300AED111 /* LaunchScreen.storyboard in Resources */,
+				FA5DF978213656B800FA6E3C /* TextbookCellNib.xib in Resources */,
 				FA9CA30D211276E300AED111 /* Assets.xcassets in Resources */,
 				FA9CA30B211276E200AED111 /* Main.storyboard in Resources */,
 			);
