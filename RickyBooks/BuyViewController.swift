@@ -9,27 +9,17 @@
 import UIKit
 import Kingfisher
 
-class TextbookTableViewCell: UITableViewCell {
-    @IBOutlet weak var textbookTitleLabel: UILabel!
-    @IBOutlet weak var textbookAuthorLabel: UILabel!
-    @IBOutlet weak var textbookEditionLabel: UILabel!
-    @IBOutlet weak var textbookConditionLabel: UILabel!
-    @IBOutlet weak var textbookTypeLabel: UILabel!
-    @IBOutlet weak var textbookCoursecodeLabel: UILabel!
-    @IBOutlet weak var textbookPriceLabel: UILabel!
-    @IBOutlet weak var textbookTimestampLabel: UILabel!
-    @IBOutlet weak var textbookSellerLabel: UILabel!
-    @IBOutlet weak var textbookImageView: UIImageView!
-}
-
 class BuyViewController: UITableViewController {
     private var textbooks = [Textbook]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UINib(nibName: "TextbookCellNib", bundle: nil), forCellReuseIdentifier: "TextbookCell")
+        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(getTextbooksReq(_:)), for: .valueChanged)
         self.refreshControl = refreshControl
+        
         getTextbooksReq((Any).self)
     }
     
@@ -68,7 +58,7 @@ class BuyViewController: UITableViewController {
             if let detailsVC = segue.destination as? DetailsViewController {
                 if let indexPath = self.tableView.indexPathForSelectedRow {
                     let textbook = textbooks[indexPath.row]
-                    if let cell = self.tableView.cellForRow(at: indexPath) as? TextbookTableViewCell {
+                    if let cell = self.tableView.cellForRow(at: indexPath) as? TextbookCell {
                         detailsVC.detailsImageData = cell.textbookImageView.image!
                     }
                     detailsVC.detailsTitleText = textbook.textbook_title
@@ -86,8 +76,7 @@ class BuyViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookCell", for: indexPath) as! TextbookTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TextbookCell", for: indexPath) as! TextbookCell
         let textbook = textbooks[indexPath.row]
         cell.textbookTitleLabel?.text = textbook.textbook_title
         cell.textbookAuthorLabel?.text = textbook.textbook_author
