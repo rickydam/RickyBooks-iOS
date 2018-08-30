@@ -12,6 +12,7 @@
 		AD9EC3811800181104EC7E67 /* Pods_RickyBooksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D3910B7EABDA851566C1DC /* Pods_RickyBooksUITests.framework */; };
 		FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA085CBE21140369005C8DE9 /* SellViewController.swift */; };
 		FA085CC1211411FB005C8DE9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */; };
+		FA2E02E22137B16B00622DD9 /* DeleteTextbook.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2E02E12137B16B00622DD9 /* DeleteTextbook.swift */; };
 		FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */; };
 		FA44930A2135F5B100C8FEB5 /* GetSignedPutUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */; };
 		FA44930C213601CE00C8FEB5 /* GetBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */; };
@@ -74,6 +75,7 @@
 		F0C66DD2B30BBD0389108AA8 /* Pods-RickyBooksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickyBooksTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RickyBooksTests/Pods-RickyBooksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FA085CBE21140369005C8DE9 /* SellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellViewController.swift; sourceTree = "<group>"; };
 		FA085CC0211411FB005C8DE9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA2E02E12137B16B00622DD9 /* DeleteTextbook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteTextbook.swift; sourceTree = "<group>"; };
 		FA3FC22F2127AE2100366B35 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSignedPutUrl.swift; sourceTree = "<group>"; };
 		FA44930B213601CE00C8FEB5 /* GetBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBaseUrl.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				FAFD3F4B213500F40001F9EA /* PostTextbook.swift */,
 				FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */,
 				FA44930D2136245400C8FEB5 /* PutImageAws.swift */,
+				FA2E02E12137B16B00622DD9 /* DeleteTextbook.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */,
 				FAFD3F4A2134CD190001F9EA /* CreateAlert.swift in Sources */,
 				FAFD3F3421346E0A0001F9EA /* GetTextbooks.swift in Sources */,
+				FA2E02E22137B16B00622DD9 /* DeleteTextbook.swift in Sources */,
 				FA4A2C9421162AC5003E7F5F /* BuyViewController.swift in Sources */,
 				FAFD3F3B21349CFA0001F9EA /* UserData.swift in Sources */,
 				FA9CA304211276E200AED111 /* AppDelegate.swift in Sources */,
