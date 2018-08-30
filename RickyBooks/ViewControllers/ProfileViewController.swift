@@ -23,12 +23,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         userTextbooksTableView.layer.borderWidth = 1.0
         userTextbooksTableView.register(UINib(nibName: "TextbookCellNib", bundle: nil), forCellReuseIdentifier: "TextbookCell")
         
-        let refreshControl = UIRefreshControl()
-        refreshControl.addTarget(self, action: #selector(getUserTextbooksReq(_:)), for: .valueChanged)
-        userTextbooksTableView.refreshControl = refreshControl
-        
-        let logoutButton = UIBarButtonItem(title: "Logout", style: .done, target: self, action: #selector(logoutPressed(_:)))
-        self.navigationItem.rightBarButtonItem = logoutButton
+        setRefreshControl()
+        setSettingsButton()
+        setDeleteButton()
         
         getUserTextbooksReq((Any).self)
     }
@@ -44,7 +41,67 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         })
     }
     
-    @objc private func logoutPressed(_ sender: Any) {
+    @objc private func deletePressed(_ sender: Any) {
+        if(!self.userTextbooksTableView.isEditing) {
+            self.userTextbooksTableView.setEditing(true, animated: true)
+            self.userTextbooksTableView.refreshControl = nil
+            self.navigationItem.leftBarButtonItem = nil
+            setCancelButton()
+            self.navigationController?.navigationBar.backgroundColor = UIColor.darkGray
+            self.navigationItem.title = "Delete textbooks!"
+        }
+    }
+    
+    @objc private func cancelPressed(_ sender: Any) {
+        self.userTextbooksTableView.setEditing(false, animated: true)
+        setRefreshControl()
+        setSettingsButton()
+        setDeleteButton()
+        self.navigationController?.navigationBar.backgroundColor = UIColor.white
+        self.navigationItem.title = "Profile"
+    }
+    
+    func setDeleteButton() {
+        let deleteButton = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deletePressed(_:)))
+        self.navigationItem.rightBarButtonItem = deleteButton
+    }
+    
+    func setCancelButton() {
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelPressed(_:)))
+        self.navigationItem.rightBarButtonItem = cancelButton
+    }
+    
+    func setSettingsButton() {
+        let settingsButton = UIBarButtonItem(image: UIImage(named: "Settings"), style: .done, target: self, action: #selector(settingsPressed(_:)))
+        self.navigationItem.leftBarButtonItem = settingsButton
+    }
+    
+    func setRefreshControl() {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(getUserTextbooksReq(_:)), for: .valueChanged)
+        userTextbooksTableView.refreshControl = refreshControl
+    }
+    
+    @objc private func settingsPressed(_ sender: Any) {
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        alert.addAction(UIAlertAction(title: "Logout", style: .default, handler: {
+            action in
+            self.logoutPressed()
+        }))
+        alert.addAction(UIAlertAction(title: "Delete Account", style: .destructive, handler: {
+            action in
+            print("Delete account")
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            action in
+            print("Cancel settings")
+        }))
+        DispatchQueue.main.async {
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func logoutPressed() {
         let keychain = Keychain(service: "com.rickybooks.rickybooks")
         keychain["token"] = nil
         keychain["user_id"] = nil
@@ -81,6 +138,27 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userTextbooks.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Go to the EditView
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        deleteTextbook(textbookId: String(userTextbooks[indexPath.row].id), withCompletion: {(isSuccessful) -> Void in
+            if(isSuccessful) {
+                self.userTextbooks.remove(at: indexPath.row)
+                DispatchQueue.main.async {
+                    self.userTextbooksTableView.reloadData()
+                }
+            }
+            else {
+                DispatchQueue.main.async {
+                    self.cancelPressed((Any).self)
+                    createAlert(title: "Oh no! Server problem!", message: "Seems like we are unable to reach the server at the moment.\n\nPlease try again later.")
+                }
+            }
+        })
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
