@@ -57,6 +57,7 @@ class PostTextbook {
                     }
                     else {
                         self.textbookId = nil
+                        completion()
                     }
                 }
                 else if(statusCode == 422) {
@@ -169,7 +170,7 @@ class PostTextbook {
         requestTask.resume()
     }
     
-    func getData() -> String {
-        return textbookId!
+    func getData() -> String? {
+        return textbookId
     }
 }

@@ -114,6 +114,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         clearImage()
         self.chosenImageData = nil
         self.chosenImageExtension = nil
+        self.chosenImage.image = nil
     }
     
     func setImage(imageData: UIImage) {
