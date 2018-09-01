@@ -14,6 +14,10 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var userTextbooksTableView: UITableView!
     
+    override func viewWillAppear(_ animated: Bool) {
+        getUserTextbooksReq((Any).self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
