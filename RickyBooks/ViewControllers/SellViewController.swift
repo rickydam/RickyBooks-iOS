@@ -161,17 +161,22 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
             var textbookId: String?
             textbookId = postTextbook.getData()
             if(textbookId != nil) {
-                let getSignedPutUrl = GetSignedPutUrl()
-                getSignedPutUrl.req(textbookId: textbookId!, chosenImageExtension: self.chosenImageExtension, withCompletion: {(isSuccessful) in
-                    if(isSuccessful) {
-                        let signedPutUrl = getSignedPutUrl.getData()
-                        putImageAws(signedPutUrlString: signedPutUrl, chosenImageExtension: self.chosenImageExtension, chosenImageData: self.chosenImageData)
-                        DispatchQueue.main.async {
-                            self.clearImageData()
-                        }
-                    }
-                })
+                self.storeImageReq(textbookId: textbookId!)
             }
+        })
+    }
+    func storeImageReq(textbookId: String) {
+        let getSignedPutUrl = GetSignedPutUrl()
+        getSignedPutUrl.req(textbookId: textbookId, chosenImageExtension: self.chosenImageExtension, withCompletion: {(isSuccessful) in
+            if(isSuccessful) {
+                let signedPutUrl = getSignedPutUrl.getData()
+                putImageAws(signedPutUrlString: signedPutUrl, chosenImageExtension: self.chosenImageExtension, chosenImageData: self.chosenImageData)
+                DispatchQueue.main.async {
+                    self.clearImageData()
+                }
+            }
+        })
+    }
         })
     }
     
