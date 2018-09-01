@@ -35,6 +35,17 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var chosenImageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var scrollViewBottomConstraint: NSLayoutConstraint!
     
+    var editTextbookMode = Bool()
+    var editTextbookIdText = String()
+    var editImageData: UIImage?
+    var editTitleText =  String()
+    var editAuthorText = String()
+    var editEditionText = String()
+    var editConditionText = String()
+    var editTypeText = String()
+    var editCoursecodeText = String()
+    var editPriceText = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
