@@ -139,10 +139,15 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
     
     @IBAction func onSubmitPressed(_ sender: UIButton) {
-        postTextbook()
+        if(!editTextbookMode) {
+            postTextbookReq()
+        }
+        else {
+            editTextbookReq()
+        }
     }
     
-    func postTextbook() {
+    func postTextbookReq() {
         let titleInput = textbookTitleField.text!
         let authorInput = textbookAuthorField.text!
         let editionInput = textbookEditionField.text!
@@ -155,7 +160,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         postTextbook.req(sellViewController: self, titleInput: titleInput, authorInput: authorInput, editionInput: editionInput, conditionInput: conditionInput, typeInput: typeInput, coursecodeInput: coursecodeInput, priceInput: priceInput, withCompletion: {
             var textbookId: String?
             textbookId = postTextbook.getData()
-            if textbookId != nil {
+            if(textbookId != nil) {
                 let getSignedPutUrl = GetSignedPutUrl()
                 getSignedPutUrl.req(textbookId: textbookId!, chosenImageExtension: self.chosenImageExtension, withCompletion: {
                     let signedPutUrl = getSignedPutUrl.getData()
