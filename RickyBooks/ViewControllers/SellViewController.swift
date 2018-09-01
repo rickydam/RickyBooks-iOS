@@ -165,6 +165,45 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
             }
         })
     }
+    
+    func editTextbookReq() {
+        let titleInput = textbookTitleField.text!
+        let authorInput = textbookAuthorField.text!
+        let editionInput = textbookEditionField.text!
+        let conditionInput = textbookConditionField.text!
+        let typeInput = textbookTypeField.text!
+        let coursecodeInput = textbookCoursecodeField.text!
+        let priceInput = textbookPriceField.text!
+        
+        if(editImageData != nil) {
+            // This textbook has an image
+            if(editImageData != chosenImageData && chosenImageData != nil) {
+                // The textbook image was changed
+                replaceImageReq()
+            }
+            if(chosenImageData == nil) {
+                // The textbook image has been deleted
+                deleteImageReq()
+            }
+        }
+        if(editImageData == nil) {
+            // This textbook has no image
+            if(chosenImageData != nil) {
+                // An image has been added
+                storeImageReq(textbookId: editTextbookIdText)
+            }
+        }
+        
+        editTextbook(textbookId: editTextbookIdText, titleInput: titleInput, authorInput: authorInput, editionInput: editionInput, conditionInput: conditionInput, typeInput: typeInput, coursecodeInput: coursecodeInput, priceInput: priceInput, withCompletion: {(isSuccessful) in
+            if(isSuccessful) {
+                DispatchQueue.main.async {
+                    createAlert(title: "Success!", message: "Textbook successfully updated!")
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        })
+    }
+    
     func storeImageReq(textbookId: String) {
         let getSignedPutUrl = GetSignedPutUrl()
         getSignedPutUrl.req(textbookId: textbookId, chosenImageExtension: self.chosenImageExtension, withCompletion: {(isSuccessful) in
@@ -177,6 +216,23 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
             }
         })
     }
+    
+    func replaceImageReq() {
+        deleteImageDb(textbookId: self.editTextbookIdText, withCompletion: {(isSuccessful) in
+            if(isSuccessful) {
+                self.storeImageReq(textbookId: self.editTextbookIdText)
+            }
+        })
+    }
+    
+    func deleteImageReq() {
+        let getSignedDeleteUrl = GetSignedDeleteUrl()
+        getSignedDeleteUrl.req(textbookId: editTextbookIdText, withCompletion: {(isSuccessful) in
+            if(isSuccessful) {
+                let signedDeleteUrl = getSignedDeleteUrl.getData()
+                deleteImageAws(signedDeleteUrlString: signedDeleteUrl)
+                deleteImageDb(textbookId: self.editTextbookIdText, withCompletion: {_ in})
+            }
         })
     }
     
