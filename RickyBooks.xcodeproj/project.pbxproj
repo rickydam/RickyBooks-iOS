@@ -24,6 +24,7 @@
 		FA60EFD4213A28ED00B979F5 /* GetSignedDeleteUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */; };
 		FA60EFD6213A32BF00B979F5 /* GetToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD5213A32BF00B979F5 /* GetToken.swift */; };
 		FA60EFD8213A393600B979F5 /* DeleteImageAws.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD7213A393600B979F5 /* DeleteImageAws.swift */; };
+		FA60EFDA213A3A0C00B979F5 /* DeleteImageDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD9213A3A0C00B979F5 /* DeleteImageDb.swift */; };
 		FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7005C0211DF46400513E7F /* TabBarController.swift */; };
 		FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */; };
 		FA9CA304211276E200AED111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9CA303211276E200AED111 /* AppDelegate.swift */; };
@@ -90,6 +91,7 @@
 		FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSignedDeleteUrl.swift; sourceTree = "<group>"; };
 		FA60EFD5213A32BF00B979F5 /* GetToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetToken.swift; sourceTree = "<group>"; };
 		FA60EFD7213A393600B979F5 /* DeleteImageAws.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteImageAws.swift; sourceTree = "<group>"; };
+		FA60EFD9213A3A0C00B979F5 /* DeleteImageDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteImageDb.swift; sourceTree = "<group>"; };
 		FA7005C0211DF46400513E7F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		FA9CA300211276E200AED111 /* RickyBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,6 +268,7 @@
 				FA2E02E12137B16B00622DD9 /* DeleteTextbook.swift */,
 				FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */,
 				FA60EFD7213A393600B979F5 /* DeleteImageAws.swift */,
+				FA60EFD9213A3A0C00B979F5 /* DeleteImageDb.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				FAFD3F36213489920001F9EA /* Login.swift in Sources */,
 				FAFD3F402134C1A70001F9EA /* Textbook.swift in Sources */,
 				FAFD3F50213507760001F9EA /* PostTextbookErrorsData.swift in Sources */,
+				FA60EFDA213A3A0C00B979F5 /* DeleteImageDb.swift in Sources */,
 				FA9CA306211276E200AED111 /* HomeViewController.swift in Sources */,
 				FA44930A2135F5B100C8FEB5 /* GetSignedPutUrl.swift in Sources */,
 				FA5DF97A21365E7E00FA6E3C /* TextbookCell.swift in Sources */,
