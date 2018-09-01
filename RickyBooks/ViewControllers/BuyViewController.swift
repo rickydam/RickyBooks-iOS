@@ -12,6 +12,10 @@ import Kingfisher
 class BuyViewController: UITableViewController {
     private var textbooks = [Textbook]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        getTextbooksReq((Any).self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(UINib(nibName: "TextbookCellNib", bundle: nil), forCellReuseIdentifier: "TextbookCell")
