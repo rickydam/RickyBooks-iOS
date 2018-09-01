@@ -21,6 +21,7 @@
 		FA5DF978213656B800FA6E3C /* TextbookCellNib.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5DF977213656B800FA6E3C /* TextbookCellNib.xib */; };
 		FA5DF97A21365E7E00FA6E3C /* TextbookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DF97921365E7E00FA6E3C /* TextbookCell.swift */; };
 		FA5DF97D2136764A00FA6E3C /* GetUserTextbooks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5DF97C2136764A00FA6E3C /* GetUserTextbooks.swift */; };
+		FA60EFD4213A28ED00B979F5 /* GetSignedDeleteUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */; };
 		FA60EFD6213A32BF00B979F5 /* GetToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA60EFD5213A32BF00B979F5 /* GetToken.swift */; };
 		FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7005C0211DF46400513E7F /* TabBarController.swift */; };
 		FA8E10DA21139B7D00E12D2D /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */; };
@@ -85,6 +86,7 @@
 		FA5DF977213656B800FA6E3C /* TextbookCellNib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextbookCellNib.xib; sourceTree = "<group>"; };
 		FA5DF97921365E7E00FA6E3C /* TextbookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextbookCell.swift; sourceTree = "<group>"; };
 		FA5DF97C2136764A00FA6E3C /* GetUserTextbooks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserTextbooks.swift; sourceTree = "<group>"; };
+		FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSignedDeleteUrl.swift; sourceTree = "<group>"; };
 		FA60EFD5213A32BF00B979F5 /* GetToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetToken.swift; sourceTree = "<group>"; };
 		FA7005C0211DF46400513E7F /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA8E10D921139B7D00E12D2D /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				FA4493092135F5B100C8FEB5 /* GetSignedPutUrl.swift */,
 				FA44930D2136245400C8FEB5 /* PutImageAws.swift */,
 				FA2E02E12137B16B00622DD9 /* DeleteTextbook.swift */,
+				FA60EFD3213A28ED00B979F5 /* GetSignedDeleteUrl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -509,6 +512,7 @@
 				FA7005C1211DF46400513E7F /* TabBarController.swift in Sources */,
 				FA5DF97D2136764A00FA6E3C /* GetUserTextbooks.swift in Sources */,
 				FA3FC2302127AE2100366B35 /* DetailsViewController.swift in Sources */,
+				FA60EFD4213A28ED00B979F5 /* GetSignedDeleteUrl.swift in Sources */,
 				FA085CBF21140369005C8DE9 /* SellViewController.swift in Sources */,
 				FAFD3F4A2134CD190001F9EA /* CreateAlert.swift in Sources */,
 				FAFD3F3421346E0A0001F9EA /* GetTextbooks.swift in Sources */,
