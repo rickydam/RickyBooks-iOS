@@ -141,7 +141,36 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Go to the EditView
+        performSegue(withIdentifier: "ProfileToSell", sender: self)
+        userTextbooksTableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ProfileToSell") {
+            if let sellVC = segue.destination as? SellViewController {
+                sellVC.navigationItem.title = "Edit textbook!"
+                sellVC.editTextbookMode = true
+                if let indexPath = self.userTextbooksTableView.indexPathForSelectedRow {
+                    let textbook = userTextbooks[indexPath.row]
+                    sellVC.editTextbookIdText = String(textbook.id)
+                    if let cell = self.userTextbooksTableView.cellForRow(at: indexPath) as? TextbookCell {
+                        if(textbook.images.count > 0) {
+                            sellVC.editImageData = cell.textbookImageView.image!
+                        }
+                        else {
+                            sellVC.editImageData = nil
+                        }
+                    }
+                    sellVC.editTitleText = textbook.textbook_title
+                    sellVC.editAuthorText = textbook.textbook_author
+                    sellVC.editEditionText = textbook.textbook_edition
+                    sellVC.editConditionText = textbook.textbook_condition
+                    sellVC.editTypeText = textbook.textbook_type
+                    sellVC.editCoursecodeText = textbook.textbook_coursecode
+                    sellVC.editPriceText = textbook.textbook_price
+                }
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
