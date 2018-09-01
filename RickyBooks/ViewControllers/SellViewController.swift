@@ -96,7 +96,7 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
             }
         }
         else if(chooseImageButton.titleLabel?.text == "Delete Image") {
-            clearImage()
+            clearImageData()
         }
         else {
             print("Error with choosing or deleting the image.")
@@ -108,6 +108,12 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         chosenImageHeightConstraint.constant = 0
         chooseImageButton.setTitle("Choose Image", for: .normal)
         chooseImageButton.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+    }
+    
+    func clearImageData() {
+        clearImage()
+        self.chosenImageData = nil
+        self.chosenImageExtension = nil
     }
     
     func setImage(imageData: UIImage) {
@@ -154,6 +160,9 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
                 getSignedPutUrl.req(textbookId: textbookId!, chosenImageExtension: self.chosenImageExtension, withCompletion: {
                     let signedPutUrl = getSignedPutUrl.getData()
                     putImageAws(signedPutUrlString: signedPutUrl, chosenImageExtension: self.chosenImageExtension, chosenImageData: self.chosenImageData)
+                    DispatchQueue.main.async {
+                        self.clearImageData()
+                    }
                 })
             }
         })
