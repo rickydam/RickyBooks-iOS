@@ -490,6 +490,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="j75-3P-J6h"/>
                     <connections>
                         <outlet property="userTextbooksTableView" destination="H1w-VT-Dzy" id="XHB-gc-gaO"/>
+                        <segue destination="EVA-NZ-ERn" kind="show" identifier="ProfileToSell" id="TQM-ru-RxR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="87W-LW-Cfj" userLabel="First Responder" sceneMemberID="firstResponder"/>
