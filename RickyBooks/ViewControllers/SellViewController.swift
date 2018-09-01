@@ -62,6 +62,19 @@ class SellViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        if(editTextbookMode) {
+            if(editImageData != nil) {
+                setImage(imageData: editImageData!)
+            }
+            textbookTitleField.text = editTitleText
+            textbookAuthorField.text = editAuthorText
+            textbookEditionField.text = editEditionText
+            textbookConditionField.text = editConditionText
+            textbookTypeField.text = editTypeText
+            textbookCoursecodeField.text = editCoursecodeText
+            textbookPriceField.text = editPriceText
+        }
     }
     
     @objc private func keyboardWillShow(_ sender: NSNotification) {
