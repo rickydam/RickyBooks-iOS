@@ -18,7 +18,7 @@ func putImageAws(signedPutUrlString: String, chosenImageExtension: String.SubSeq
     
     var imageData: Data?
     if(chosenImageExtension == "jpeg") {
-        if let jpegData = UIImageJPEGRepresentation(chosenImageData, 0.6) {
+        if let jpegData = UIImageJPEGRepresentation(chosenImageData, 0.5) {
             imageData = jpegData
         }
         else {
