@@ -10,9 +10,9 @@ import UIKit
 import KeychainAccess
 
 class GetSignedPutUrl {
-    private var signedPutUrl = String()
+    private var signedPutUrl: String?
     
-    func req(textbookId: String, chosenImageExtension: String.SubSequence, withCompletion completion: @escaping (() -> Void)) {
+    func req(textbookId: String, chosenImageExtension: String.SubSequence, withCompletion completion: @escaping ((_ isSuccessful: Bool) -> Void)) {
         let endpoint = getBaseUrl() + "/aws/" + textbookId + "/" + chosenImageExtension
         var request = URLRequest(url: URL(string: endpoint)!)
         request.httpMethod = "GET"
@@ -26,13 +26,21 @@ class GetSignedPutUrl {
             }
             let rawUrlData = String(data: data, encoding: String.Encoding.utf8)!
             let fixedUrlData = (rawUrlData.replacingOccurrences(of: "\\u0026", with: "&")).replacingOccurrences(of: "\"", with: "")
-            self.signedPutUrl = fixedUrlData
-            completion()
+            
+            let statusCode = (response as? HTTPURLResponse)?.statusCode
+            if(statusCode == 200) {
+                self.signedPutUrl = fixedUrlData
+                completion(true)
+            }
+            else {
+                self.signedPutUrl = nil
+                completion(false)
+            }
         }
         requestTask.resume()
     }
     
     func getData() -> String {
-        return signedPutUrl
+        return signedPutUrl!
     }
 }
